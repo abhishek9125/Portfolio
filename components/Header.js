@@ -1,10 +1,11 @@
 import React from 'react'
+import ThemeToggler from './ThemeToggler'
 
 function Header() {
     return (
-        <div>
-            
-        </div>
+        <header>
+            <ThemeToggler />
+        </header>
     )
 }
 
