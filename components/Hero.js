@@ -2,6 +2,7 @@ import { Download, Send } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
 import { RiArrowDownSLine } from 'react-icons/ri'
+import Socials from './Socials'
 import { Button } from './ui/button'
 
 function Hero() {
@@ -23,6 +24,10 @@ function Hero() {
                                 Download CV <Download size={18} />
                             </Button>
                         </div>
+                        <Socials 
+                            containerStyles="flex gap-x-6 mx-auto xl:mx-0"
+                            iconStyles="text-foreground text-[22px] hover:text-primary transition-all"
+                        />
                     </div>
                     <div className="hidden xl:flex relative ">Image</div>
                 </div>
