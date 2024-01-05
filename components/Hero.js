@@ -59,10 +59,11 @@ function Hero() {
                         <DevImg
                             containerStyles="bg-hero_shape w-[510px] h-[462px] bg-no-repeat relative bg-bottom"
                             imgSrc="/hero/developer2.png"
+                            imgStyle="top-[19px] left-[80px]"
                         />
                     </div>
                 </div>
-                <div className="hidden md:flex absolute left-2/4 bottom-44 xl:bottom-12">
+                <div className="hidden md:flex absolute left-2/4 bottom-44 xl:bottom-0 animate-bounce">
                     <RiArrowDownSLine className="text-3xl text-primary" />
                 </div>
             </div>
