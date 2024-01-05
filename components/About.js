@@ -109,8 +109,6 @@ function About() {
     const getData = (arr, title) => {
         return arr.find((item) => item.title === title);
     }
-    const data = getData(qualificationData, 'experience')
-    console.log(`getData`, data.title)
 
     return (
         <section className="xl:h-[860px] pb-12 py-24">
@@ -127,7 +125,7 @@ function About() {
                         />
                     </div>
                     <div className="flex-1">
-                        <Tabs defaultValue="personal">
+                        <Tabs defaultValue="qualifications">
                             <TabsList className="w-full grid xl:grid-cols-3 xl:max-w-[520px] xl:border dark:border-none">
                                 <TabsTrigger className="w-[162px] xl:w-auto" value="personal">
                                     Personal Info
