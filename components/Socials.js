@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import React from 'react'
-import { RiCodeBoxFill, RiCodepenFill, RiGithubFill, RiInstagramFill, RiLinkedinFill } from 'react-icons/ri';
+import { RiCodeBoxFill, RiCodepenFill, RiGithubFill, RiInstagramFill, RiLinkedinFill, RiMediumFill } from 'react-icons/ri';
 
 const icons = [
     {
@@ -16,6 +16,10 @@ const icons = [
     {
         path: '/',
         name: <RiInstagramFill />
+    },
+    {
+        path: '/',
+        name: <RiMediumFill />
     },
 ];
 
