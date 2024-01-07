@@ -1,27 +1,7 @@
 'use client'
 
-import Link from 'next/link';
+import { icons } from '@/constants'
 import React from 'react'
-import { RiCodeBoxFill, RiCodepenFill, RiGithubFill, RiInstagramFill, RiLinkedinFill, RiMediumFill } from 'react-icons/ri';
-
-const icons = [
-    {
-        path: '/',
-        name: <RiLinkedinFill />
-    },
-    {
-        path: '/',
-        name: <RiGithubFill />
-    },
-    {
-        path: '/',
-        name: <RiInstagramFill />
-    },
-    {
-        path: '/',
-        name: <RiMediumFill />
-    },
-];
 
 function Socials({ containerStyles, iconStyles }) {
     return (
@@ -29,11 +9,11 @@ function Socials({ containerStyles, iconStyles }) {
             {
                 icons.map((icon, index) => {
                     return (
-                        <Link href={icon.path} key={index}>
+                        <a href={icon.path} key={index} target="_blank">
                             <div className={`${iconStyles}`}>
                                 {icon.name}
                             </div>
-                        </Link>
+                        </a>
                     )
                 })
             }

@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image';
 import React from 'react';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -10,37 +9,11 @@ import { CardTitle } from './ui/card';
 import { CardDescription } from './ui/card';
 import { CardHeader } from './ui/card';
 import { Card } from './ui/card';
-
-const reviewsData = [
-    {
-        avatar: '/reviews/avatar-1.png',
-        name: 'Snehil Verma',
-        job: 'Lead Developer',
-        review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut'
-    },
-    {
-        avatar: '/reviews/avatar-2.png',
-        name: 'Snehil Verma',
-        job: 'Lead Developer',
-        review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut'
-    },
-    {
-        avatar: '/reviews/avatar-3.png',
-        name: 'Snehil Verma',
-        job: 'Lead Developer',
-        review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut'
-    },
-    {
-        avatar: '/reviews/avatar-3.png',
-        name: 'Snehil Verma',
-        job: 'Lead Developer',
-        review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut'
-    },
-]
+import { reviewsData } from '@/constants';
 
 function Reviews() {
     return (
-        <section className="mb-12 xl:mb-32">
+        <section className="mb-12 xl:mb-6">
             <div className="container mx-auto">
                 <h2 className="section-title mb-12 text-center mx-auto">Reviews</h2>
                 <Swiper
@@ -63,7 +36,7 @@ function Reviews() {
                                     <Card className="bg-tertiary/60 dark:bg-secondary/40 p-8 min-h-[250px]">
                                         <CardHeader className="p-0 mb-10">
                                             <div className="flex items-center gap-x-4">
-                                                <Image src={person.avatar} width={70} height={70} alt="" priority />
+                                                <img src={person.avatar} width={50} height={50} alt="" priority className="rounded-full" />
                                                 <div className="flex flex-col">
                                                     <CardTitle>
                                                         {person.name}

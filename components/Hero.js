@@ -1,3 +1,4 @@
+import { RESUME_LINK } from '@/constants'
 import { Download, Send } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
@@ -9,7 +10,7 @@ import { Button } from './ui/button'
 
 function Hero() {
     return (
-        <section className="py-12 xl:py-24 h-[84vh] xl:pt-28 bg-hero bg-no-repeat bg-bottom bg-cover dark:bg-none">
+        <section className="py-0 xl:py-24 h-[84vh] xl:pt-28 bg-hero bg-no-repeat bg-bottom bg-cover dark:bg-none">
             <div className="container mx-auto">
                 <div className="flex justify-between gap-x-8">
                     <div className="flex max-w-[650px] flex-col justify-center mx:auto xl:mx-0 text-center xl:text-left">
@@ -22,9 +23,11 @@ function Hero() {
                                     Contact Me <Send size={18} />
                                 </Button>
                             </Link>
-                            <Button variant="secondary" className="gap-x-2">
-                                Download CV <Download size={18} />
-                            </Button>
+                            <a href={RESUME_LINK} target="_blank">
+                                <Button variant="secondary" className="gap-x-2">
+                                    Download CV <Download size={18} />
+                                </Button>
+                            </a>
                         </div>
                         <Socials
                             containerStyles="flex gap-x-6 mx-auto xl:mx-0"
@@ -42,7 +45,7 @@ function Hero() {
                         <Badge
                             containerStyles="absolute top-[80%] -left-[1rem]"
                             icon={<RiTodoFill />}
-                            endCountNum={10}
+                            endCountNum={11}
                             // endCountText="k"
                             badgeText="Finished Projects"
                         />
