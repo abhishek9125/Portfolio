@@ -63,15 +63,6 @@ export const projectData = [
         badge: 'FullStack'
     },
     {
-        image: '/work/cyberkart.gif',
-        category: 'Personal',
-        name: 'CyberKart - eCommerce Platform',
-        description: 'Built Online eCommerce Platform with Admin Dashboard to Manage Orders, Inventory, Advanced Search Filtering.',
-        link: null,
-        github: 'https://github.com/abhishek9125/mern-ecommerce',
-        badge: 'MERN'
-    },
-    {
         image: '/work/ayuga.png',
         category: 'Professional',
         name: 'Ayuga Website',
@@ -79,6 +70,15 @@ export const projectData = [
         link: 'https://ayuga.in/',
         github: null,
         badge: 'FullStack'
+    },
+    {
+        image: '/work/cyberkart.gif',
+        category: 'Personal',
+        name: 'CyberKart - eCommerce Platform',
+        description: 'Built Online eCommerce Platform with Admin Dashboard to Manage Orders, Inventory, Advanced Search Filtering.',
+        link: null,
+        github: 'https://github.com/abhishek9125/mern-ecommerce',
+        badge: 'MERN'
     },
     {
         image: '/work/bblunt.png',
