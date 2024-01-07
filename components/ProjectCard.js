@@ -1,7 +1,7 @@
 import { Github, Link2Icon } from 'lucide-react'
 import Image from 'next/image'
 import React from 'react'
-import { Badge } from './ui/Badge'
+import { Badge } from './ui/badge'
 import { CardHeader } from './ui/card'
 import { Card } from './ui/card'
 
