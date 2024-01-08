@@ -18,7 +18,7 @@ function Skills() {
 
     return (
         <div>
-            <div className="mb-16 ">
+            <div className="mb-16 text-left">
                 <div>
                     {skillData.map((item, index) => {
                         const { title } = item;

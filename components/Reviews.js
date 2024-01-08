@@ -13,7 +13,7 @@ import { reviewsData } from '@/constants';
 
 function Reviews() {
     return (
-        <section className="mb-12 xl:mb-6">
+        <section className="mb-0 xl:mb-6">
             <div className="container mx-auto">
                 <h2 className="section-title mb-12 text-center mx-auto">Reviews</h2>
                 <Swiper
@@ -27,7 +27,7 @@ function Reviews() {
                     pagination={{
                         clickable: true
                     }}
-                    className="h-[350px]"
+                    className="h-[370px] xl:h-[350px]"
                 >
                     {
                         reviewsData.map((person, index) => {
