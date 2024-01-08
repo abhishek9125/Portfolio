@@ -33,7 +33,7 @@ function Reviews() {
                         reviewsData.map((person, index) => {
                             return (
                                 <SwiperSlide key={index}>
-                                    <Card className="bg-tertiary/60 dark:bg-secondary/40 p-8 min-h-[250px]">
+                                    <Card className="bg-tertiary/60 dark:bg-secondary/40 p-8 min-h-[290px]">
                                         <CardHeader className="p-0 mb-10">
                                             <div className="flex items-center gap-x-4">
                                                 <img src={person.avatar} width={50} height={50} alt="" priority className="rounded-full" />

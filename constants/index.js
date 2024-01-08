@@ -27,26 +27,26 @@ export const reviewsData = [
     {
         avatar: 'https://media.licdn.com/dms/image/C5103AQG5zshdx6GWIA/profile-displayphoto-shrink_100_100/0/1552193664230?e=1710374400&v=beta&t=DfLNDt0QjzPzR8dKCotuBGgC_LcItDa-Wq4Fy7pPxn4',
         name: 'Snehil Verma',
-        job: 'Lead Engineer',
+        job: 'Lead Backend Engineer',
         review: 'Abhishek is a tremendous performer. He is hardworking and committed to the cause and has never shied away from going the extra distance for the benefit of the larger project. He has worked on multiple projects with me. His knowledge about front-end is fantastic. He is a dependable person if you have him in your team.'
     },
     {
         avatar: 'https://media.licdn.com/dms/image/C4E03AQH_4f2aztqaLQ/profile-displayphoto-shrink_400_400/0/1516684098165?e=1710374400&v=beta&t=XWWihDRe480i7QJ0hUnJhIuLmp7Zksi9Ru91J4I4V1g',
         name: 'Shreyansh Jain',
         job: 'Lead Frontend Engineer',
-        review: 'Abhishek is a tremendous performer. He is hardworking and committed to the cause and has never shied away from going the extra distance for the benefit of the larger project. He has worked on multiple projects with me. His knowledge about front-end is fantastic. He is a dependable person if you have him in your team.'
+        review: 'It was quite nice to having worked with him closely, really intimidated by the way he approaches a problem statement. Has a knack for attention to detail and diving deep into something to know, the HOW and WHAT of a problem. Saw him come-in as a fresher and become a good Software Engineer.'
     },
     {
         avatar: 'https://media.licdn.com/dms/image/C5103AQGlgyZXeWWzMw/profile-displayphoto-shrink_400_400/0/1578777726455?e=1710374400&v=beta&t=3c--3KW6iDHE2UG4dBqOOPt10CHnii-oVr7yMwPNI7Y',
         name: 'Naman Vyas',
         job: 'Lead DevOps Engineer',
-        review: 'Abhishek is a tremendous performer. He is hardworking and committed to the cause and has never shied away from going the extra distance for the benefit of the larger project. He has worked on multiple projects with me. His knowledge about front-end is fantastic. He is a dependable person if you have him in your team.'
+        review: 'One of the best dev I\'ve worked with. His great attention to detail and expertise in skills make him a true rockstar of any team he is a part of. Would really recommend him to anyone looking to multiply their team\'s potential.'
     },
     {
         avatar: 'https://media.licdn.com/dms/image/D4D03AQHuPtTzMOeGCQ/profile-displayphoto-shrink_400_400/0/1688842559228?e=1710374400&v=beta&t=UQ6iNzTgIC0N-CcUyvH_zs0PUZg5Ktr9IbMipu1zjFs',
         name: 'Harshit Garg',
         job: 'Senior Software Engineer',
-        review: 'Abhishek is a tremendous performer. He is hardworking and committed to the cause and has never shied away from going the extra distance for the benefit of the larger project. He has worked on multiple projects with me. His knowledge about front-end is fantastic. He is a dependable person if you have him in your team.'
+        review: 'It was great working with Abhishek. Though we worked together for 2 years I would recommend Abhishek for his dedication towards work. His understanding towards the problem statement and finding a good solution with his skills on ReactJS, NodeJS, Optimisation stuff. Also a good team player, quick learner, always been a person to learn and implement new code base.'
     },
 ]
 
@@ -63,10 +63,19 @@ export const projectData = [
         badge: 'FullStack'
     },
     {
+        image: '/work/portfolio.png',
+        category: 'Personal',
+        name: 'Porfolio Website',
+        description: 'Built a Personal Portfolio Website with all Skills, Qualifications, Reviews, Projects, Contact Me Modules.',
+        link: 'https://portfolio-6wdf.vercel.app',
+        github: 'https://github.com/abhishek9125/Portfolio',
+        badge: 'Next Js'
+    },
+    {
         image: '/work/ayuga.png',
         category: 'Professional',
         name: 'Ayuga Website',
-        description: 'Built Intuitive UI Modules for Product Cards, Banners, Cart, My Account, Track Order, Page Layouts etc.',
+        description: 'Built Intuitive UI Modules for Product Cards, Banners, Cart, My Account, Track Order, Contentful Pages, Sale Pages etc.',
         link: 'https://ayuga.in/',
         github: null,
         badge: 'FullStack'
@@ -152,4 +161,99 @@ export const projectData = [
         github: 'https://github.com/abhishek9125/VideoChatApp',
         badge: 'MERN'
     },
+];
+
+export const skillData = [
+    {
+        title: 'Frameworks / Libraries',
+        data: [
+            {
+                name: 'React'
+            },
+            {
+                name: 'Next'
+            },
+            {
+                name: 'Redux'
+            },
+            {
+                name: 'Saga'
+            },
+            {
+                name: 'Node'
+            },
+            {
+                name: 'Express'
+            },
+            {
+                name: 'Sockets'
+            },
+            {
+                name: 'WebRTC'
+            },
+            {
+                name: 'Styled Components'
+            },
+        ]
+    },
+    {
+        title: 'Languages',
+        data: [
+            {
+                name: 'JavaScript'
+            },
+            {
+                name: 'C++'
+            },
+            {
+                name: 'HTML5'
+            },
+            {
+                name: 'CSS'
+            },
+        ]
+    },
+    {
+        title: 'Database',
+        data: [
+            {
+                name: 'SQL'
+            },
+            {
+                name: 'MongoDB'
+            }
+        ]
+    },
+    {
+        title: 'Tools',
+        data: [
+            {
+                name: 'Git'
+            },
+            {
+                name: 'VSCode'
+            },
+            {
+                name: 'Postman'
+            },
+            {
+                name: 'Lighthouse'
+            },
+            {
+                name: 'Jira'
+            },
+            {
+                name: 'GTMetrix'
+            },
+            {
+                name: 'Chrome Dev Tools'
+            },
+            {
+                name: 'MongoDb Compass'
+            },
+            {
+                name: 'NewRelic'
+            },
+        ]
+    }
 ];
