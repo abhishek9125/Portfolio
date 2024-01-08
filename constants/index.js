@@ -50,7 +50,7 @@ export const reviewsData = [
     },
 ]
 
-export const RESUME_LINK = "https://drive.google.com/file/d/1FzA792Bw9OqBfPMXFqqNnVGzLwKijOpE/view?usp=drive_link/view"
+export const RESUME_LINK = "https://drive.google.com/file/d/1D0pU-g0-kN_tCQ_BPjafxl5T1LrQvqzz/view"
 
 export const projectData = [
     {
