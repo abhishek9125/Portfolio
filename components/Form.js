@@ -12,8 +12,6 @@ function Form() {
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
     
-    console.log(`name`, name)
-
     return (
         <form className="flex flex-col gap-y-4">
             <div className="relative flex items-center">
