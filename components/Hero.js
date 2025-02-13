@@ -38,15 +38,14 @@ function Hero() {
                         <Badge
                             containerStyles="absolute top-[24%] -left-[5rem]"
                             icon={<RiBriefcase4Fill />}
-                            endCountNum={3}
+                            endCountNum={4}
                             badgeText="Years of Experience"
                         />
 
                         <Badge
                             containerStyles="absolute top-[80%] -left-[1rem]"
                             icon={<RiTodoFill />}
-                            endCountNum={12}
-                            // endCountText="k"
+                            endCountNum={17}
                             badgeText="Finished Projects"
                         />
 

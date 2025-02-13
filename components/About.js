@@ -13,9 +13,14 @@ const qualificationData = [
         title: 'experience',
         data: [
             {
+                company: 'CARS24 Pvt. Ltd.',
+                role: 'Software Development Engineer III',
+                years: 'March 2024 - April 2025'
+            },
+            {
                 company: 'Honasa Consumer Ltd. (MamaEarth)',
                 role: 'Senior Software Engineer',
-                years: 'October 2022 - Present'
+                years: 'October 2022 - March 2024'
             },
             {
                 company: 'Honasa Consumer Ltd. (MamaEarth)',
@@ -75,7 +80,7 @@ function About() {
     }
 
     return (
-        <section className="xl:h-[860px] pb-8 xl:py-24 py-0">
+        <section className="xl:h-[920px] pb-8 xl:py-24 py-0">
             <div className="container mx-auto">
                 <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto">
                     About Me

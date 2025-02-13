@@ -25,42 +25,91 @@ export const icons = [
 
 export const reviewsData = [
     {
-        avatar: 'https://media.licdn.com/dms/image/C5103AQG5zshdx6GWIA/profile-displayphoto-shrink_100_100/0/1552193664230?e=1710374400&v=beta&t=DfLNDt0QjzPzR8dKCotuBGgC_LcItDa-Wq4Fy7pPxn4',
+        avatar: 'https://media.licdn.com/dms/image/v2/D5603AQHtKR0dvQLOEQ/profile-displayphoto-shrink_100_100/B56ZSJ2FtdGsAY-/0/1737479446537?e=1744848000&v=beta&t=VQ5K-UlFh5kzFwNCbv_XIATYY3teX932qKZVS_4vhtE',
         name: 'Snehil Verma',
         job: 'Lead Backend Engineer',
         review: 'Abhishek is a tremendous performer. He is hardworking and committed to the cause and has never shied away from going the extra distance for the benefit of the larger project. He has worked on multiple projects with me. His knowledge about front-end is fantastic. He is a dependable person if you have him in your team.'
     },
     {
-        avatar: 'https://media.licdn.com/dms/image/C4E03AQH_4f2aztqaLQ/profile-displayphoto-shrink_400_400/0/1516684098165?e=1710374400&v=beta&t=XWWihDRe480i7QJ0hUnJhIuLmp7Zksi9Ru91J4I4V1g',
+        avatar: 'https://media.licdn.com/dms/image/v2/C4E03AQH_4f2aztqaLQ/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1516684098327?e=1744848000&v=beta&t=JYGelejmybmk2ZcH6s_hxBKD1HSD-DXO6XqZyLpGfEw',
         name: 'Shreyansh Jain',
         job: 'Lead Frontend Engineer',
         review: 'It was quite nice to having worked with him closely, really intimidated by the way he approaches a problem statement. Has a knack for attention to detail and diving deep into something to know, the HOW and WHAT of a problem. Saw him come-in as a fresher and become a good Software Engineer.'
     },
     {
-        avatar: 'https://media.licdn.com/dms/image/C5103AQGlgyZXeWWzMw/profile-displayphoto-shrink_400_400/0/1578777726455?e=1710374400&v=beta&t=3c--3KW6iDHE2UG4dBqOOPt10CHnii-oVr7yMwPNI7Y',
+        avatar: 'https://media.licdn.com/dms/image/v2/C5103AQGlgyZXeWWzMw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1578777726455?e=1744848000&v=beta&t=AJXoEN7A4FxXUIKpnbH4Zf8W_oY5ipWLav4cIA7Jb4E',
         name: 'Naman Vyas',
         job: 'Lead DevOps Engineer',
         review: 'One of the best dev I\'ve worked with. His great attention to detail and expertise in skills make him a true rockstar of any team he is a part of. Would really recommend him to anyone looking to multiply their team\'s potential.'
     },
     {
-        avatar: 'https://media.licdn.com/dms/image/D4D03AQHuPtTzMOeGCQ/profile-displayphoto-shrink_400_400/0/1688842559228?e=1710374400&v=beta&t=UQ6iNzTgIC0N-CcUyvH_zs0PUZg5Ktr9IbMipu1zjFs',
+        avatar: 'https://media.licdn.com/dms/image/v2/D4D03AQHuPtTzMOeGCQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1688842559228?e=1744848000&v=beta&t=e9RNUXbKz9j2Vx1xVL4tBCua5E95RNMKfedTj8RQXE0',
         name: 'Harshit Garg',
         job: 'Senior Software Engineer',
         review: 'It was great working with Abhishek. Though we worked together for 2 years I would recommend Abhishek for his dedication towards work. His understanding towards the problem statement and finding a good solution with his skills on ReactJS, NodeJS, Optimisation stuff. Also a good team player, quick learner, always been a person to learn and implement new code base.'
     },
 ]
 
-export const RESUME_LINK = "https://drive.google.com/file/d/1JRTNGRHMxLqqMq6yl8CfwUsk3KtzlOWx/view"
+export const RESUME_LINK = "https://drive.google.com/file/d/1jyLwkhjILZ_D8z5wfjegzhk5NIrJ21yl/view"
 
 export const projectData = [
     {
-        image: '/work/mamaearth.png',
+        image: '/work/cars24.jpg',
+        category: 'Professional',
+        name: 'CARS24 Website',
+        description: 'Built Multiple Modules and Optimised Performance across the system for all the Seller Flows.',
+        link: 'https://www.cars24.com/',
+        github: null,
+        badge: 'Frontend',
+        isMobile: true
+    },
+    {
+        image: '/work/mamaearth.jpg',
         category: 'Professional',
         name: 'MamaEarth Website',
         description: 'Built Home, Cart, Checkout, Authentication, Account, Sale Page, Subscription Module, Payment Gateway Modules.',
         link: 'https://mamaearth.in/',
         github: null,
-        badge: 'FullStack'
+        badge: 'FullStack',
+        isMobile: true
+    },
+    {
+        image: '/work/traffic-challan.jpg',
+        category: 'Professional',
+        name: 'Traffic Challan',
+        description: 'Built Complete Module Journey which includes Walkthroughs, Complex Logics, Feedback Modules, Cart systems, Payments etc.',
+        link: 'https://www.cars24.com/traffic-challan/',
+        github: null,
+        badge: 'Frontend',
+        isMobile: true
+    },
+    {
+        image: '/work/pre-delivery-inspection.jpg',
+        category: 'Professional',
+        name: 'Pre-Delivery Inspection',
+        description: 'Built Car Inspection Consumer Journey with optimised structure and web vitals',
+        link: 'https://www.cars24.com/pre-delivery-inspection/',
+        github: null,
+        badge: 'Frontend',
+        isMobile: true
+    },
+    {
+        image: '/work/partner-portal.jpg',
+        category: 'Professional',
+        name: 'SaaS Panels',
+        description: 'Built Multiple Modular Dashboard Panels with a wide array of features.',
+        link: '/',
+        github: null,
+        badge: 'Frontend'
+    },
+    {
+        image: '/work/pdf-generation-service.jpg',
+        category: 'Professional',
+        name: 'PDF Generation Service',
+        description: 'Built PDF Generator where we can use advanced react to create complex PDFs with great UX',
+        link: '/',
+        github: null,
+        badge: 'Frontend'
     },
     {
         image: '/work/portfolio.png',
