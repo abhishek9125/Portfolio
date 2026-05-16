@@ -1,8 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
-@layer base {
 
 @layer base {
   :root {
@@ -26,7 +24,7 @@
     --border: 8 82% 92%;
     --input: 8 82% 92%;
     --ring: 9 99% 67%;
-    --radius: 0.5rem;
+    --radius: 0.75rem;
   }
 
   .dark {
@@ -53,46 +51,131 @@
   }
 }
 
-}
- 
 @layer base {
   * {
     @apply border-border;
   }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 7.5rem;
+  }
+
+  @media (max-width: 639px) {
+    html {
+      scroll-padding-top: 7rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground overflow-x-hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    @apply bg-primary/25 text-foreground;
   }
 }
 
+/* Desktop-first typography — mobile overrides via max-sm only */
 .h1 {
-  @apply text-6xl xl:text-[72px] xl:leading-[80px] tracking-[-2px] font-bold;
+  @apply text-5xl sm:text-6xl xl:text-[72px] xl:leading-[1.05] tracking-[-0.03em] font-bold max-sm:text-[1.75rem] max-sm:leading-[1.15];
 }
 
 .h2 {
-  @apply text-4xl font-bold;
+  @apply text-4xl font-bold tracking-[-0.02em] max-sm:text-2xl max-sm:leading-tight;
 }
 
 .h3 {
-  @apply text-3xl font-bold;
+  @apply text-3xl font-bold tracking-[-0.02em] max-sm:text-xl max-sm:leading-snug;
 }
 
 .h4 {
-  @apply text-[22px] font-semibold;
+  @apply text-[22px] font-semibold max-sm:text-lg max-sm:leading-snug;
 }
 
 .subtitle {
-  @apply text-muted-foreground text-lg mb-8 font-light;
+  @apply text-muted-foreground text-lg leading-relaxed font-light max-sm:text-base;
 }
 
 .section-title {
-  @apply text-4xl font-bold relative w-max flex items-center justify-between gap-x-3 before:bg-dots_light before:dark:bg-dots_dark before:bg-no-repeat before:bg-center before:w-[24px] before:h-[24px]
+  @apply text-4xl font-bold tracking-[-0.02em] relative w-max flex items-center justify-between gap-x-3 mx-auto xl:mx-0 before:bg-dots_light before:dark:bg-dots_dark before:bg-no-repeat before:bg-center before:w-[24px] before:h-[24px] before:shrink-0 max-sm:text-2xl max-sm:w-full max-sm:max-w-full max-sm:justify-center max-sm:before:hidden max-sm:px-1;
+}
+
+.section-padding {
+  @apply py-10 xl:py-12 max-sm:py-8;
+}
+
+.section-gap {
+  @apply space-y-0;
 }
 
 .badge {
-  @apply z-10 w-[200px] h-[68px] bg-white dark:backdrop-blur-[44px] shadow-2xl p-4 rounded-[10px] flex items-center gap-x-4;
+  @apply z-10 w-[200px] h-[68px] bg-white/90 dark:bg-secondary/80 dark:backdrop-blur-xl backdrop-blur-md shadow-lg shadow-black/5 dark:shadow-black/20 p-4 rounded-2xl flex items-center gap-x-4 border border-white/60 dark:border-white/10;
 }
 
 .swiper-horizontal > .section-pagination-bullets .swiper-pagination-bullet,
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-  @apply bg-primary;
+  @apply bg-primary opacity-40 transition-opacity;
+}
+
+.swiper-pagination-bullet-active {
+  @apply opacity-100 !important;
+}
+
+.swiper {
+  @apply overflow-hidden;
+}
+
+.swiper-pagination {
+  @apply !bottom-0;
+}
+
+.btn-glow {
+  position: relative;
+  isolation: isolate;
+}
+
+.btn-glow::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  z-index: -1;
+  border-radius: 9999px;
+  background: linear-gradient(
+    120deg,
+    hsl(var(--primary)),
+    hsl(var(--primary) / 0.4),
+    hsl(var(--primary)),
+    hsl(var(--primary) / 0.6)
+  );
+  background-size: 300% 300%;
+  animation: btn-glow-shift 4s ease infinite;
+  opacity: 0.65;
+}
+
+@keyframes btn-glow-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-glow::before {
+    animation: none;
+  }
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }

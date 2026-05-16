@@ -1,36 +1,33 @@
 'use client'
 
 import useScrollProgess from '@/hooks/useScrollProgess'
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion'
+import { usePathname } from 'next/navigation'
 import React from 'react'
 
-const variants = {
-    hidden: { opacity: 0 },
-    enter: { opacity: 1 },
-}
-
 function Template({ children }) {
-
     const completion = useScrollProgess();
+    const pathname = usePathname();
 
     return (
         <>
-            <motion.main 
-                variants={variants} 
-                initial="hidden" 
-                animate="enter"
-                transition={{ type: 'linear', delay: 0.2, duration: 0.4 }}
-            >
-                {children}
-            </motion.main>
+            <AnimatePresence mode="wait">
+                <motion.main
+                    key={pathname}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -6 }}
+                    transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+                >
+                    {children}
+                </motion.main>
+            </AnimatePresence>
 
-            <span
-                style={{ transform: `translateY(${completion - 100}%)` }}
-                className="fixed z-50 bg-primary w-1 top-0 right-0 bottom-0 transition-all duration-700"
+            <div
+                style={{ width: `${completion}%` }}
+                className="fixed z-50 bg-primary h-[2px] top-0 left-0 transition-[width] duration-150 ease-out pointer-events-none"
+                aria-hidden
             />
-            {/* <div className="h-[1000px]">
-
-            </div> */}
         </>
     )
 }

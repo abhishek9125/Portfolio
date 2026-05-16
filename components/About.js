@@ -1,223 +1,201 @@
-import { Briefcase, Calendar, GraduationCap, HomeIcon, MailIcon, PhoneCall, User2 } from 'lucide-react'
-import Image from 'next/image';
-import React from 'react'
-import DevImg from './DevImg';
-import Skills from './Skills';
-import { TabsTrigger } from './ui/tabs';
-import { TabsContent } from './ui/tabs';
-import { TabsList } from './ui/tabs';
-import { Tabs } from './ui/tabs';
+'use client'
 
-const qualificationData = [
-    {
-        title: 'experience',
-        data: [
-            {
-                company: 'CARS24 Pvt. Ltd.',
-                role: 'Software Development Engineer III',
-                years: 'March 2024 - April 2025'
-            },
-            {
-                company: 'Honasa Consumer Ltd. (MamaEarth)',
-                role: 'Senior Software Engineer',
-                years: 'October 2022 - March 2024'
-            },
-            {
-                company: 'Honasa Consumer Ltd. (MamaEarth)',
-                role: 'Software Engineer',
-                years: 'July 2021 - September 2022'
-            },
-            {
-                company: 'Honasa Consumer Ltd. (MamaEarth)',
-                role: 'Software Development Intern',
-                years: 'January 2021 - June 2021'
-            }
-        ]
-    },
-    {
-        title: 'education',
-        data: [
-            {
-                university: 'Thapar Institute of Engineering & Technology',
-                qualification: 'Bachelor\'s in Computer Science',
-                years: '2017 - 2021'
-            }
-        ]
-    }
-]
-
-const infoData = [
-    {
-        icon: <User2 size={20} />,
-        text: 'Abhishek Agarwal'
-    },
-    {
-        icon: <PhoneCall size={20} />,
-        text: '+91-7017841375'
-    },
-    {
-        icon: <MailIcon size={20} />,
-        text: 'abhishek4075@gmail.com'
-    },
-    {
-        icon: <Calendar size={20} />,
-        text: 'Born on 25 May, 1998'
-    },
-    {
-        icon: <GraduationCap size={20} />,
-        text: 'Bachelor\'s in Computer Science'
-    },
-    {
-        icon: <HomeIcon size={20} />,
-        text: 'Gurgaon'
-    }
-]
+import { MailIcon, MapPin, Phone, Globe, ExternalLink, Languages } from 'lucide-react'
+import Link from 'next/link'
+import AboutVisual from './AboutVisual'
+import Skills from './Skills'
+import SectionReveal from './SectionReveal'
+import { TabsTrigger } from './ui/tabs'
+import { TabsContent } from './ui/tabs'
+import { TabsList } from './ui/tabs'
+import { Tabs } from './ui/tabs'
+import {
+    qualificationData,
+    expertiseAreas,
+    contactPrimary,
+    contactSecondary,
+} from '@/constants'
 
 function About() {
-
-    const getData = (arr, title) => {
-        return arr.find((item) => item.title === title);
-    }
+    const experience = qualificationData.find((item) => item.title === 'experience')
 
     return (
-        <section className="xl:h-[920px] pb-8 xl:py-24 py-0">
+        <section id="about" className="scroll-mt-32 section-padding max-sm:pt-10">
             <div className="container mx-auto">
-                <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto">
-                    About Me
-                </h2>
-                <div className="flex flex-col xl:flex-row">
-                    <div className="hidden xl:flex flex-1 relative">
-                        <DevImg
-                            containerStyles="bg-about_shape_light dark:bg-about_shape_dark w-[505px] h-[505px] bg-no-repeat relative"
-                            imgSrc="/hero/developer2.png"
-                            imgStyle="top-[30px] left-[140px]"
-                        />
-                    </div>
-                    <div className="flex-1">
-                        <Tabs defaultValue="qualifications">
-                            <TabsList className="w-full grid xl:grid-cols-3 xl:max-w-[520px] xl:border dark:border-none">
-                                <TabsTrigger className="w-[162px] xl:w-auto" value="personal">
-                                    Personal Info
-                                </TabsTrigger>
-                                <TabsTrigger className="w-[162px] xl:w-auto" value="qualifications">
-                                    Qualifications
-                                </TabsTrigger>
-                                <TabsTrigger className="w-[162px] xl:w-auto" value="skills">
-                                    Skills
-                                </TabsTrigger>
-                            </TabsList>
-                            <div className="text-lg mt-12 xl:mt-8 ">
-                                <TabsContent value="personal">
-                                    <div className="text-center xl:text-left">
-                                        <h3 className="h3 mb-4">
-                                            Unmatched Service Quality for Over 10 Years
-                                        </h3>
-                                        <p className="subtitle max-w-xl mx-auto xl:mx-0">
-                                            I Specialise in Crafting Intuitive Websites with Cutting Edge Technology, delivering Dynamic and Engaging User Experience
-                                        </p>
-                                        <div className="grid xl:grid-cols-2 gap-4 mb-12">
-                                            {
-                                                infoData.map((item, index) => {
-                                                    return (
-                                                        <div className="flex items-center gap-x-4 mx-auto xl:mx-0" key={index}>
-                                                            <div className="text-primary">{item.icon}</div>
-                                                            <div>{item.text}</div>
-                                                        </div>
-                                                    )
-                                                })
-                                            }
-                                        </div>
-                                        <div className="flex flex-col gap-y-2">
-                                            <div className="text-primary">Language Skills</div>
-                                            <div className="border-b border-border" />
-                                            <div>English, Hindi</div>
-                                        </div>
-                                    </div>
-                                </TabsContent>
-                                <TabsContent value="qualifications">
-                                    <div>
-                                        <h3 className="h3 mb-8 text-center xl:text-left">My Awesome Journey</h3>
-                                        <div className="grid md:grid-cols-2 gap-y-8">
-                                            <div className="flex flex-col gap-y-6">
-                                                <div className="flex gap-x-4 items-center text-[22px] text-primary">
-                                                    <Briefcase />
-                                                    <h4 className="capitalize font-medium">
-                                                        {
-                                                            getData(qualificationData, 'experience').title
-                                                        }
-                                                    </h4>
-                                                </div>
-                                                <div className="flex flex-col gap-y-8">
-                                                    {
-                                                        getData(qualificationData, 'experience').data.map((item, index) => {
-                                                            const { company, role, years } = item;
-                                                            return (
-                                                                <div className="flex gap-x-8 group" key={index}>
-                                                                    <div className="h-[84px] w-[1px] bg-border relative ml-2">
-                                                                        <div className="w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] group-hover:translate-y-[84px] transition-all duration-500">
-                                                                        </div>
-                                                                    </div>
-                                                                    <div>
-                                                                        <div className="font-semibold text-xl leading-none mb-2">
-                                                                            {company}
-                                                                        </div>
-                                                                        <div className="text-lg leading-none text-muted-foreground  mb-4">
-                                                                            {role}
-                                                                        </div>
-                                                                        <div className="text-base font-medium">{years}</div>
-                                                                    </div>
-                                                                </div>
-                                                            )
-                                                        })
-                                                    }
-                                                </div>
-                                            </div>
-                                            <div className="flex flex-col gap-y-6">
-                                                <div className="flex gap-x-4 items-center text-[22px] text-primary">
-                                                    <GraduationCap size={28} />
-                                                    <h4 className="capitalize font-medium">
-                                                        {
-                                                            getData(qualificationData, 'education').title
-                                                        }
-                                                    </h4>
-                                                </div>
-                                                <div className="flex flex-col gap-y-8">
-                                                    {
-                                                        getData(qualificationData, 'education').data.map((item, index) => {
-                                                            const { university, qualification, years } = item;
-                                                            return (
-                                                                <div className="flex gap-x-8 group" key={index}>
-                                                                    <div className="h-[84px] w-[1px] bg-border relative ml-2">
-                                                                        <div className="w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] group-hover:translate-y-[84px] transition-all duration-500">
-                                                                        </div>
-                                                                    </div>
-                                                                    <div>
-                                                                        <div className="font-semibold text-xl leading-none mb-2">
-                                                                            {university}
-                                                                        </div>
-                                                                        <div className="text-lg leading-none text-muted-foreground  mb-4">
-                                                                            {qualification}
-                                                                        </div>
-                                                                        <div className="text-base font-medium">{years}</div>
-                                                                    </div>
-                                                                </div>
-                                                            )
-                                                        })
-                                                    }
-                                                </div>
-                                            </div>
+                <SectionReveal>
+                    <h2 className="section-title mb-3 text-center mx-auto">About Me</h2>
+                    <p className="text-center text-muted-foreground max-w-lg mx-auto mb-8">
+                        What I specialize in, how I work, and the experience behind it.
+                    </p>
+                </SectionReveal>
 
+                <div className="flex flex-col xl:flex-row gap-12 xl:gap-10 max-lg:gap-8">
+                    <SectionReveal className="hidden xl:flex flex-1 items-center justify-center" delay={0.1}>
+                        <AboutVisual />
+                    </SectionReveal>
+
+                    <SectionReveal className="flex-1" delay={0.15}>
+                        <Tabs defaultValue="about">
+                            <TabsList className="w-full grid grid-cols-3 h-auto p-1 xl:max-w-[520px] xl:border dark:border-none">
+                                <TabsTrigger className="text-xs sm:text-sm px-2 py-2.5" value="about">Overview</TabsTrigger>
+                                <TabsTrigger className="text-xs sm:text-sm px-2 py-2.5" value="experience">Experience</TabsTrigger>
+                                <TabsTrigger className="text-xs sm:text-sm px-2 py-2.5" value="skills">Skills</TabsTrigger>
+                            </TabsList>
+
+                            <div className="mt-12 xl:mt-8 max-sm:mt-6">
+                                <TabsContent value="about" className="focus-visible:outline-none">
+                                    <div className="text-center xl:text-left space-y-10 max-sm:space-y-8">
+                                        {/* Primary — value proposition */}
+                                        <div>
+                                            <p className="text-xs uppercase tracking-[0.2em] text-primary font-semibold mb-3">
+                                                Summary
+                                            </p>
+                                            <h3 className="h3 mb-4">Full-stack engineering at product scale</h3>
+                                            <p className="subtitle max-w-xl mx-auto xl:mx-0 mb-0">
+                                                Senior Software Engineer with 5+ years owning features from UI to API —
+                                                high-traffic React &amp; React Native apps, Node.js services, and cloud-backed
+                                                systems across e-commerce at Flipkart, CARS24, and Honasa.
+                                            </p>
+                                        </div>
+
+                                        {/* Primary — expertise pillars */}
+                                        <div>
+                                            <p className="text-xs uppercase tracking-[0.2em] text-primary font-semibold mb-4">
+                                                Core expertise
+                                            </p>
+                                            <div className="grid sm:grid-cols-2 gap-3">
+                                                {expertiseAreas.map((area) => (
+                                                    <div
+                                                        key={area.title}
+                                                        className="p-4 rounded-2xl border border-primary/15 bg-primary/5 text-left transition-colors hover:border-primary/30"
+                                                    >
+                                                        <p className="font-semibold mb-1.5">{area.title}</p>
+                                                        <p className="text-sm text-muted-foreground leading-relaxed">
+                                                            {area.description}
+                                                        </p>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </div>
+
+                                        {/* Primary — contact essentials */}
+                                        <div>
+                                            <p className="text-xs uppercase tracking-[0.2em] text-primary font-semibold mb-4">
+                                                Get in touch
+                                            </p>
+                                            <div className="flex flex-col sm:flex-row gap-3 max-w-xl mx-auto xl:mx-0">
+                                                {contactPrimary.map((item) => (
+                                                    <div
+                                                        key={item.label}
+                                                        className="flex-1 flex items-center gap-3 p-4 rounded-2xl border border-border/70 bg-white/60 dark:bg-secondary/40"
+                                                    >
+                                                        {item.label === 'Email' ? (
+                                                            <MailIcon className="text-primary shrink-0" size={20} />
+                                                        ) : (
+                                                            <MapPin className="text-primary shrink-0" size={20} />
+                                                        )}
+                                                        <div className="text-left min-w-0">
+                                                            <p className="text-xs text-muted-foreground">{item.label}</p>
+                                                            {item.href ? (
+                                                                <a
+                                                                    href={item.href}
+                                                                    className="font-medium text-sm hover:text-primary transition-colors truncate block"
+                                                                >
+                                                                    {item.text}
+                                                                </a>
+                                                            ) : (
+                                                                <p className="font-medium text-sm">{item.text}</p>
+                                                            )}
+                                                        </div>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                            <Link
+                                                href="/contact"
+                                                className="inline-flex items-center gap-1.5 text-sm font-medium text-primary mt-4 hover:underline"
+                                            >
+                                                Send a message <ExternalLink size={14} />
+                                            </Link>
+                                        </div>
+
+                                        {/* Secondary — supporting details */}
+                                        <div className="pt-6 border-t border-border/60">
+                                            <p className="text-xs uppercase tracking-wider text-muted-foreground mb-3">
+                                                Additional details
+                                            </p>
+                                            <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted-foreground justify-center xl:justify-start">
+                                                {contactSecondary.map((item) => (
+                                                    <span key={item.label} className="inline-flex items-center gap-1.5">
+                                                        {item.label === 'Phone' && <Phone size={14} className="text-primary/70" />}
+                                                        {item.label === 'Website' && <Globe size={14} className="text-primary/70" />}
+                                                        {item.label === 'Languages' && (
+                                                            <Languages size={14} className="text-primary/70" />
+                                                        )}
+                                                        {item.href ? (
+                                                            <a href={item.href} className="hover:text-primary transition-colors">
+                                                                {item.text}
+                                                            </a>
+                                                        ) : (
+                                                            <span>{item.text}</span>
+                                                        )}
+                                                    </span>
+                                                ))}
+                                            </div>
                                         </div>
                                     </div>
                                 </TabsContent>
-                                <TabsContent value="skills">
+
+                                <TabsContent value="experience" className="focus-visible:outline-none">
                                     <div className="text-center xl:text-left">
+                                        <p className="text-xs uppercase tracking-[0.2em] text-primary font-semibold mb-3">
+                                            Career
+                                        </p>
+                                        <h3 className="h3 mb-6">Work Experience</h3>
+                                        <div className="flex flex-col gap-y-4 max-w-2xl mx-auto xl:mx-0">
+                                            {experience.data.map((item, index) => (
+                                                <article
+                                                    className="relative text-left pl-4 border-l-2 border-primary/25 py-1"
+                                                    key={`${item.company}-${item.years}`}
+                                                >
+                                                    {index === 0 && (
+                                                        <span className="inline-block text-[10px] font-semibold uppercase tracking-wider text-primary bg-primary/10 px-2 py-0.5 rounded-full mb-2">
+                                                            Current
+                                                        </span>
+                                                    )}
+                                                    <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1 mb-0.5">
+                                                        <h4 className="font-semibold text-lg">{item.company}</h4>
+                                                        <span className="text-xs text-muted-foreground">{item.years}</span>
+                                                    </div>
+                                                    <p className="text-primary text-sm font-medium mb-2">{item.role}</p>
+                                                    <ul className="space-y-1.5">
+                                                        {item.highlights?.map((h) => (
+                                                            <li key={h} className="text-sm text-muted-foreground flex gap-2 leading-relaxed">
+                                                                <span className="text-primary/80 shrink-0 mt-0.5">·</span>
+                                                                {h}
+                                                            </li>
+                                                        ))}
+                                                    </ul>
+                                                </article>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </TabsContent>
+
+                                <TabsContent value="skills" className="focus-visible:outline-none">
+                                    <div className="text-center xl:text-left">
+                                        <p className="text-xs uppercase tracking-[0.2em] text-primary font-semibold mb-3">
+                                            Technical depth
+                                        </p>
+                                        <h3 className="h3 mb-2">Skills &amp; Stack</h3>
+                                        <p className="text-sm text-muted-foreground mb-8 max-w-md">
+                                            Highlighted skills reflect production use at scale — not a laundry list.
+                                        </p>
                                         <Skills />
                                     </div>
                                 </TabsContent>
                             </div>
                         </Tabs>
-                    </div>
+                    </SectionReveal>
                 </div>
             </div>
         </section>
