@@ -9,6 +9,9 @@ export const navLinks = [
     { path: '/', name: 'home' },
     { path: '/case-studies', name: 'case studies', matchPrefix: '/case-study' },
     { path: '/projects', name: 'projects' },
+    { path: '/articles', name: 'articles', matchPrefix: '/article' },
+    { path: '/resume', name: 'resume' },
+    { path: '/setup', name: 'setup' },
     { path: '/contact', name: 'contact' },
 ]
 

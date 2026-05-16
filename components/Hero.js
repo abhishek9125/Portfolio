@@ -12,6 +12,8 @@ import { motion, AnimatePresence, useReducedMotion, useScroll, useTransform } fr
 import { RiArrowDownSLine } from 'react-icons/ri'
 import HeroMobile from './HeroMobile'
 import HeroVisual from './HeroVisual'
+import MagneticButton from './MagneticButton'
+import ScrollHighlight from './ScrollHighlight'
 import Socials from './Socials'
 import StatCounter from './StatCounter'
 import { Button } from './ui/button'
@@ -175,13 +177,15 @@ function HeroDesktop() {
                             </span>
                         </motion.h1>
 
-                        <motion.p
+                        <motion.div
                             custom={2} variants={fadeUp} initial="hidden" animate="visible"
-                            className="subtitle max-w-xl mx-auto xl:mx-0 mb-6"
+                            className="mb-6"
                         >
-                            Full-stack engineer with 5+ years turning complex ideas into fast, reliable software —
-                            from React &amp; React Native interfaces to Node.js APIs and cloud infrastructure.
-                        </motion.p>
+                            <ScrollHighlight
+                                text="Full-stack engineer with 5+ years turning complex ideas into fast, reliable software — from React & React Native interfaces to Node.js APIs and cloud infrastructure."
+                                className="subtitle max-w-xl mx-auto xl:mx-0"
+                            />
+                        </motion.div>
 
                         <motion.div
                             custom={3} variants={fadeUp} initial="hidden" animate="visible"
@@ -202,17 +206,21 @@ function HeroDesktop() {
                             custom={4} variants={fadeUp} initial="hidden" animate="visible"
                             className="flex flex-col sm:flex-row flex-wrap gap-3 justify-center xl:justify-start mb-6"
                         >
-                            <Link href="/contact">
-                                <Button className="btn-glow gap-x-2 w-full sm:w-auto h-[52px] px-8">
-                                    Let&apos;s work together
-                                    <ArrowRight size={18} />
-                                </Button>
-                            </Link>
-                            <a href={RESUME_LINK} target="_blank" rel="noopener noreferrer">
-                                <Button variant="outline" className="gap-x-2 w-full sm:w-auto h-[52px] px-8 bg-white/50 dark:bg-secondary/30">
-                                    Download CV <Download size={18} />
-                                </Button>
-                            </a>
+                            <MagneticButton>
+                                <Link href="/contact">
+                                    <Button className="btn-glow gap-x-2 w-full sm:w-auto h-[52px] px-8">
+                                        Let&apos;s work together
+                                        <ArrowRight size={18} />
+                                    </Button>
+                                </Link>
+                            </MagneticButton>
+                            <MagneticButton>
+                                <a href={RESUME_LINK} target="_blank" rel="noopener noreferrer">
+                                    <Button variant="outline" className="gap-x-2 w-full sm:w-auto h-[52px] px-8 bg-white/50 dark:bg-secondary/30">
+                                        Download CV <Download size={18} />
+                                    </Button>
+                                </a>
+                            </MagneticButton>
                             {CALENDLY_URL && (
                                 <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
                                     <Button variant="ghost" className="gap-x-2 w-full sm:w-auto h-[52px] px-6 border border-border/50">

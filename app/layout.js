@@ -1,4 +1,5 @@
 import BackToTop from '@/components/BackToTop'
+import TerminalEasterEgg from '@/components/TerminalEasterEgg'
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 import HiringStrip from '@/components/HiringStrip'
@@ -55,6 +56,7 @@ export default function RootLayout({ children }) {
                     <div id="main-content" className="min-w-0 overflow-x-hidden">{children}</div>
                     <Footer />
                     <BackToTop />
+                    <TerminalEasterEgg />
                 </ThemeProvider>
             </body>
         </html>

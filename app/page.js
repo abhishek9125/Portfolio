@@ -4,6 +4,7 @@ import FeaturedCaseStudy from '@/components/FeaturedCaseStudy'
 import Work from '@/components/Work'
 import Reviews from '@/components/Reviews'
 import Cta from '@/components/Cta'
+import PhilosophyQuotes from '@/components/PhilosophyQuotes'
 
 export default function Home() {
 	return (
@@ -12,6 +13,7 @@ export default function Home() {
 			<About />
 			<FeaturedCaseStudy />
 			<Work />
+			<PhilosophyQuotes />
 			<Reviews />
 			<Cta />
 		</main>

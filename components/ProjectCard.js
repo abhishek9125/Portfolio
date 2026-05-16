@@ -1,3 +1,6 @@
+'use client'
+
+import { useRef, useCallback } from 'react'
 import { Github, Link2Icon, ArrowRight } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -20,9 +23,30 @@ function ProjectPlaceholder({ label }) {
 function ProjectCard({ project }) {
     const visitHref = project.isCaseStudy ? project.link : project.link
     const isInternal = project.link?.startsWith('/')
+    const cardRef = useRef(null)
+
+    const handleMouseMove = useCallback((e) => {
+        const el = cardRef.current
+        if (!el) return
+        const rect = el.getBoundingClientRect()
+        const x = (e.clientX - rect.left) / rect.width - 0.5
+        const y = (e.clientY - rect.top) / rect.height - 0.5
+        el.style.transform = `perspective(800px) rotateY(${x * 6}deg) rotateX(${-y * 6}deg) translateY(-4px)`
+    }, [])
+
+    const handleMouseLeave = useCallback(() => {
+        const el = cardRef.current
+        if (el) el.style.transform = ''
+    }, [])
 
     return (
-        <Card className="group overflow-hidden relative h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5 border-border/60">
+        <Card
+            ref={cardRef}
+            onMouseMove={handleMouseMove}
+            onMouseLeave={handleMouseLeave}
+            className="group overflow-hidden relative h-full transition-all duration-300 hover:shadow-xl hover:shadow-primary/5 border-border/60"
+            style={{ transformStyle: 'preserve-3d', willChange: 'transform' }}
+        >
             <CardHeader className="p-0">
                 <div className="relative w-full h-[300px] flex items-center justify-center bg-tertiary dark:bg-secondary/40 xl:bg-work_project_bg_light xl:dark:bg-work_project_bg_dark xl:bg-[110%] xl:bg-no-repeat overflow-hidden max-sm:h-[220px]">
                     {project.usePlaceholder || !project.image ? (
@@ -77,12 +101,21 @@ function ProjectCard({ project }) {
                     </div>
                 </div>
             </CardHeader>
-            <div className="h-full px-8 py-6 max-sm:px-4 max-sm:py-4">
+            <div className="h-full px-8 py-6 max-sm:px-4 max-sm:py-4 flex flex-col">
                 <Badge className="uppercase text-sm font-medium mb-2 absolute top-4 left-5 max-sm:text-[10px] max-sm:top-3 max-sm:left-3">
                     {project.badge}
                 </Badge>
                 <h4 className="h4 mb-1">{project.name}</h4>
-                <p className="text-muted-foreground text-lg leading-relaxed max-sm:text-sm">{project.description}</p>
+                <p className="text-muted-foreground text-lg leading-relaxed max-sm:text-sm flex-1">{project.description}</p>
+                {project.isCaseStudy && project.link && (
+                    <Link
+                        href={project.link}
+                        className="inline-flex items-center gap-1.5 mt-3 text-sm font-medium text-primary hover:underline underline-offset-4 transition-colors"
+                    >
+                        Read case study
+                        <ArrowRight size={14} />
+                    </Link>
+                )}
             </div>
         </Card>
     )
