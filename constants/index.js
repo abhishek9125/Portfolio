@@ -185,7 +185,7 @@ export const projectData = [
         image: '/work/yotobox.png',
         category: 'Professional',
         name: 'Yotobox Website',
-        description: 'Created a Promotional Website for Honasa where you can buy 4 Products from different brands for minimal charges.',
+        description: 'Created a promotional multi-brand checkout experience for Mamaearth — bundled offers across brands.',
         link: 'https://yotobox.in/',
         github: null,
         badge: 'FullStack'
@@ -244,36 +244,80 @@ export const qualificationData = [
             {
                 company: 'Flipkart',
                 role: 'Software Development Engineer II',
-                years: 'May 2025 - Present',
+                years: 'May 2025 — Present',
                 highlights: [
-                    'Architected OTA CodePush migration from Azure to GCP with Redis — ~38% faster bundle delivery P95',
-                    'Built post-purchase commerce journeys in React Native & Next.js for millions of monthly active users',
-                    'Core contributor to internal design system — reusable TypeScript components across business units',
-                    'Owned SDLC quality: PR reviews, Jest/RTL coverage, on-call rotations, and stable release trains',
+                    'Architected the migration of OTA CodePush Service from Azure to GCP Cloud Functions, leveraging Redis for high-speed caching and reducing bundle delivery latency',
+                    'Engineered Post-Purchase FinTech journeys using React Native and Next.js, managing secure payment dashboards and order fulfillment flows for millions of active users',
+                    'Owned the full SDLC for core features: PR reviews, unit testing (Jest/RTL), stable production releases, and on-call rotations',
+                    'Core contributor to the internal design system — reusable TypeScript components for UI consistency and accessibility across business units',
                 ],
             },
             {
                 company: 'CARS24',
                 role: 'Software Development Engineer III',
-                years: 'March 2024 - April 2025',
+                years: 'March 2024 — April 2025',
                 highlights: [
-                    'Scaled VAS pod frontend — ~280% order growth across Challan, Vehicle History, and payment flows',
-                    'Improved domain INP from ~494ms to ~268ms, lifting SEO visibility and interaction responsiveness',
-                    'Introduced micro-frontend architecture with Git submodules and RBAC across SaaS operator panels',
-                    'Published npm UI library with Storybook — consistent design language across the ecosystem',
+                    'Scaled the VAS business pod frontend architecture — 300% increase in orders and complex FinTech flows such as Challan Payments and Vehicle History',
+                    'Optimized Core Web Vitals with a focus on INP, reducing latency from 494ms to 262ms at the domain level and boosting SEO',
+                    'Implemented micro-frontend architecture and Git submodules for modular development and RBAC across SaaS panels',
+                    'Published a centralized UI library on npm with Storybook for visual consistency across the ecosystem',
                 ],
             },
             {
                 company: 'Mamaearth',
                 role: 'Senior Software Engineer',
-                years: 'July 2021 - March 2024',
+                years: 'Oct 2023 — Mar 2024',
                 highlights: [
-                    'Reduced Total Blocking Time from ~8.2s to ~1.3s via Webpack tuning, chunking, and leak remediation',
-                    'Drove ~42% organic traffic growth with conditional ISR/SSR strategies optimized for crawlers',
-                    'Delivered AI recommendation & coupon journeys contributing to ~17% conversion uplift',
-                    'Resolved VAPT findings — XSS, clickjacking, and MIME-sniffing hardening across storefront',
+                    'Cut Total Blocking Time from 8s to 1.2s via Webpack tuning, dynamic chunking, and critical memory leak fixes',
+                    'Lifted organic traffic 40% with conditional ISR and SSR strategies tuned for Google crawlers',
+                    'Shipped an AI-driven product recommendation system and custom coupon journeys — 17% lift in conversion rate',
+                    'Hardened security by resolving VAPT issues: XSS, clickjacking, and MIME sniffing',
                 ],
             },
+            {
+                company: 'Mamaearth',
+                role: 'Software Engineer',
+                years: 'July 2021 — Sep 2022',
+                highlights: [
+                    'Designed a subscription-based architecture using React and Redux — 21% improvement in long-term conversion',
+                    'Improved Lighthouse scores ~30% via image optimization, on-demand loading, and CLS fixes',
+                    'Built a scalable multi-tenant platform for rapid brand launches using Next.js and automated cron synchronization',
+                ],
+            },
+        ],
+    },
+];
+
+/** Shorter work history for the homepage About → Experience tab (combined Mamaearth; not the full résumé). */
+export const homeExperienceData = [
+    {
+        company: 'Flipkart',
+        role: 'Software Development Engineer II',
+        years: 'May 2025 — Present',
+        highlights: [
+            'OTA CodePush Azure → GCP with Redis; faster bundle delivery at scale',
+            'Post-purchase FinTech in React Native & Next.js for millions of users',
+            'Design system: reusable TypeScript components across business units',
+        ],
+    },
+    {
+        company: 'CARS24',
+        role: 'Software Development Engineer III',
+        years: 'Mar 2024 — Apr 2025',
+        highlights: [
+            'VAS frontend scale-up — 300% orders; Challan, Vehicle History, payments',
+            'INP 494ms → 262ms domain-wide; SEO and interaction wins',
+            'Micro-frontends, Storybook UI library across SaaS panels',
+        ],
+    },
+    {
+        company: 'Mamaearth',
+        role: 'Software Engineer → Senior Software Engineer',
+        years: '2021 — 2024',
+        highlights: [
+            'TBT ~8s → ~1.2s — Webpack tuning, chunking, critical leak fixes',
+            '~40% organic traffic (ISR/SSR); AI recommendations & coupons — ~17% conversion',
+            'VAPT hardening; multi-tenant Next.js for rapid brand launches',
         ],
     },
 ];
@@ -281,21 +325,21 @@ export const qualificationData = [
 export const careerTimeline = [
     {
         company: 'Flipkart',
-        role: 'SDE II',
+        role: 'Software Development Engineer II',
         period: '2025 — Present',
-        summary: 'OTA platform migration, e-commerce surfaces, design systems.',
+        summary: 'OTA migration to GCP, post-purchase FinTech journeys, design system.',
     },
     {
         company: 'CARS24',
-        role: 'SDE III',
+        role: 'Software Development Engineer III',
         period: '2024 — 2025',
-        summary: 'VAS scale-up, Core Web Vitals, micro-frontends.',
+        summary: 'VAS scale-up, INP and SEO, micro-frontends, npm UI library.',
     },
     {
         company: 'Mamaearth',
-        role: 'Senior Software Engineer',
+        role: 'Software Engineer → Senior SWE',
         period: '2021 — 2024',
-        summary: 'Performance, SEO, subscriptions, multi-brand platform.',
+        summary: 'TBT & Core Web Vitals, organic/ISR, AI recommendations, security, multi-tenant Next.js.',
     },
 ];
 
@@ -310,7 +354,7 @@ export const expertiseAreas = [
     },
     {
         title: 'Cloud & Platform',
-        description: 'GCP, AWS, Docker, Redis, and reliable CI/CD delivery pipelines.',
+        description: 'GCP, Azure, Docker, Redis, and reliable CI/CD delivery pipelines.',
     },
     {
         title: 'Product Delivery',
@@ -325,8 +369,52 @@ export const contactPrimary = [
         href: 'mailto:abhishek4075@gmail.com',
     },
     {
+        label: 'Phone',
+        text: '+91-7017841375',
+        href: 'tel:+917017841375',
+    },
+    {
         label: 'Location',
         text: 'Bengaluru, India',
+    },
+];
+
+/** Sidebar + ATS — matches résumé PDF content */
+export const resumeContactItems = [
+    {
+        kind: 'email',
+        label: 'Email',
+        text: 'abhishek4075@gmail.com',
+        href: 'mailto:abhishek4075@gmail.com',
+    },
+    {
+        kind: 'phone',
+        label: 'Phone',
+        text: '+91-7017841375',
+        href: 'tel:+917017841375',
+    },
+    {
+        kind: 'location',
+        label: 'Location',
+        text: 'Bengaluru, India',
+    },
+    {
+        kind: 'website',
+        label: 'Website',
+        text: 'abhishekagarwal.me',
+        href: 'https://abhishekagarwal.me/',
+    },
+    {
+        kind: 'linkedin',
+        label: 'LinkedIn',
+        text: 'abhishek9125',
+        href: 'https://www.linkedin.com/in/abhishek9125',
+    },
+    {
+        kind: 'github',
+        label: 'GitHub',
+        text: 'abhishek9125',
+        href: 'https://github.com/abhishek9125',
     },
 ];
 
@@ -345,68 +433,67 @@ export const contactSecondary = [
 export const engineeringToolchain = [
     'Git',
     'Docker',
-    'AWS',
     'GCP',
     'Azure',
-    'GitHub Actions',
     'Redis',
-    'Storybook',
+    'Webpack',
+    'Vite',
+    'CI/CD',
 ];
 
+/** Résumé skills only — keep in sync with your master CV (no extra buzzwords). */
 export const skillData = [
     {
-        title: 'Core Stack',
-        subtitle: 'Primary technologies I ship with daily',
+        title: 'Languages',
+        subtitle: 'Languages, markup, and styling',
         tier: 'core',
         data: [
             { name: 'TypeScript' },
-            { name: 'JavaScript' },
+            { name: 'JavaScript (ES6+)' },
+            { name: 'C++' },
+            { name: 'HTML5' },
+            { name: 'CSS3/SASS' },
+        ],
+    },
+    {
+        title: 'Frameworks & State',
+        subtitle: 'Application stack and UI architecture',
+        tier: 'core',
+        data: [
             { name: 'React.js' },
             { name: 'Next.js' },
             { name: 'React Native' },
+            { name: 'Redux' },
             { name: 'Node.js' },
+            { name: 'Zustand' },
+            { name: 'Styled Components' },
+            { name: 'Tailwind CSS' },
         ],
     },
     {
-        title: 'Cloud & Infrastructure',
-        subtitle: 'Production environments & platform services',
-        tier: 'core',
-        data: [
-            { name: 'GCP' },
-            { name: 'AWS' },
-            { name: 'Azure' },
-            { name: 'Docker' },
-            { name: 'Redis' },
-            { name: 'Cloud Functions' },
-            { name: 'CI/CD' },
-        ],
-    },
-    {
-        title: 'Frontend Engineering',
-        subtitle: 'UI systems, state, and build pipelines',
+        title: 'Tools & DevOps',
+        subtitle: 'Build, test, cloud, and delivery',
         tier: 'proficient',
         data: [
-            { name: 'Redux' },
-            { name: 'Zustand' },
-            { name: 'Micro Frontends' },
             { name: 'Webpack' },
             { name: 'Vite' },
-            { name: 'Tailwind CSS' },
-            { name: 'Storybook' },
-        ],
-    },
-    {
-        title: 'Quality & Reliability',
-        subtitle: 'Testing, observability, and engineering discipline',
-        tier: 'proficient',
-        data: [
             { name: 'Jest' },
             { name: 'React Testing Library' },
             { name: 'Git' },
-            { name: 'GitHub Actions' },
-            { name: 'Performance Auditing' },
+            { name: 'Docker' },
+            { name: 'GCP' },
+            { name: 'Azure' },
+            { name: 'Redis' },
+            { name: 'CI/CD Pipelines' },
         ],
     },
+];
+
+/** Honors & awards — surfaced on visual résumé + ATS text */
+export const resumeAchievements = [
+    'Scholarship from college for 4 years consecutively',
+    'Hackathon winner — Mamaearth performance optimisation',
+    'Star Award — Flipkart',
 ];
 
 export const caseStudies = [

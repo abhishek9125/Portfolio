@@ -1,12 +1,14 @@
 'use client'
 
 import Link from 'next/link'
-import { ArrowLeft } from 'lucide-react'
+import { ArrowLeft, ChevronRight } from 'lucide-react'
+import { motion, useScroll, useSpring } from 'framer-motion'
 import SectionReveal from './SectionReveal'
 import StatCounter from './StatCounter'
 import CodeBlock from './CodeBlock'
 import ArchitectureDiagram from './ArchitectureDiagram'
 import { Button } from './ui/button'
+import { caseStudies } from '@/constants'
 
 function MetricTable({ title, rows, columns }) {
     return (
@@ -47,18 +49,42 @@ function MetricTable({ title, rows, columns }) {
     );
 }
 
+function Breadcrumb({ items }) {
+    return (
+        <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-xs text-muted-foreground mb-6 flex-wrap">
+            {items.map((item, i) => (
+                <span key={item.label} className="flex items-center gap-1.5">
+                    {i > 0 && <ChevronRight size={11} className="shrink-0" />}
+                    {item.href ? (
+                        <Link href={item.href} className="hover:text-primary transition-colors">
+                            {item.label}
+                        </Link>
+                    ) : (
+                        <span className="text-foreground font-medium truncate max-w-[200px]">{item.label}</span>
+                    )}
+                </span>
+            ))}
+        </nav>
+    )
+}
+
 function CaseStudyContent({ study }) {
+    const { scrollYProgress } = useScroll()
+    const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30, restDelta: 0.001 })
+
     return (
         <article>
+            <motion.div
+                className="fixed top-0 left-0 right-0 h-[3px] bg-primary z-50 origin-left"
+                style={{ scaleX }}
+            />
             <section className="section-padding pt-6 border-b border-border/50">
                 <div className="container mx-auto max-w-4xl">
-                    <Link
-                        href="/case-studies"
-                        className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary mb-6 transition-colors"
-                    >
-                        <ArrowLeft size={16} />
-                        All case studies
-                    </Link>
+                    <Breadcrumb items={[
+                        { label: 'Home', href: '/' },
+                        { label: 'Case Studies', href: '/case-studies' },
+                        { label: study.title },
+                    ]} />
                     <p className="text-xs uppercase tracking-[0.2em] text-primary font-semibold mb-3">
                         Case study · {study.company}
                     </p>
@@ -175,6 +201,30 @@ function CaseStudyContent({ study }) {
                             ))}
                         </div>
                     </SectionReveal>
+
+                    {/* Next case study */}
+                    {(() => {
+                        const idx = caseStudies.findIndex(s => s.slug === study.slug)
+                        const next = caseStudies[(idx + 1) % caseStudies.length]
+                        if (!next || next.slug === study.slug) return null
+                        return (
+                            <SectionReveal>
+                                <div className="border-t border-border/50 pt-8">
+                                    <p className="text-xs uppercase tracking-[0.15em] text-muted-foreground font-medium mb-2">Next case study</p>
+                                    <Link
+                                        href={`/case-study/${next.slug}`}
+                                        className="group flex items-center justify-between p-5 rounded-2xl border border-border/60 hover:border-primary/30 transition-all"
+                                    >
+                                        <div>
+                                            <p className="text-xs text-primary font-medium mb-1">{next.company}</p>
+                                            <h3 className="font-bold text-lg group-hover:text-primary transition-colors">{next.title}</h3>
+                                        </div>
+                                        <ArrowLeft size={20} className="rotate-180 text-muted-foreground group-hover:text-primary transition-colors shrink-0" />
+                                    </Link>
+                                </div>
+                            </SectionReveal>
+                        )
+                    })()}
 
                     <SectionReveal className="text-center pt-2 pb-4">
                         <p className="subtitle max-w-md mx-auto mb-6">

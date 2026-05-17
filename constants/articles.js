@@ -6,7 +6,7 @@ export const articles = [
             'Practical tips from production — not theory, not docs rewrites, just what actually moved the needle.',
         publishedAt: '2026-01-08',
         readTime: '10 min read',
-        tags: ['Performance', 'Web Vitals', 'Frontend'],
+        tags: ['Performance', 'Web Vitals'],
         sections: [
             {
                 heading: 'Why Most Web Vitals Advice Falls Short',
@@ -64,7 +64,7 @@ export const articles = [
             'Real trade-offs, real costs, and why the "just use AWS" default isn\'t always right.',
         publishedAt: '2026-01-22',
         readTime: '8 min read',
-        tags: ['Cloud', 'GCP', 'AWS'],
+        tags: ['Cloud', 'GCP'],
         sections: [
             {
                 heading: 'The Problem We Were Solving',
@@ -113,7 +113,7 @@ export const articles = [
             'Caching, pub/sub, rate limiting, and session management — from someone who uses Redis daily.',
         publishedAt: '2026-02-03',
         readTime: '9 min read',
-        tags: ['Redis', 'Backend', 'Caching'],
+        tags: ['Redis', 'Caching'],
         sections: [
             {
                 heading: 'Redis Is Not Just a Cache',
@@ -170,7 +170,7 @@ export const articles = [
             'Lessons from three production apps on choosing the right Next.js rendering strategy.',
         publishedAt: '2026-02-14',
         readTime: '8 min read',
-        tags: ['Next.js', 'SEO', 'Performance'],
+        tags: ['Next.js', 'SEO'],
         sections: [
             {
                 heading: 'The Rendering Strategy Spectrum',
@@ -220,7 +220,7 @@ export const articles = [
             'After migrating to micro-frontends at CARS24, here is what worked, what failed, and when you should avoid them entirely.',
         publishedAt: '2026-02-28',
         readTime: '11 min read',
-        tags: ['Architecture', 'Micro-Frontends', 'Frontend'],
+        tags: ['Micro-Frontends', 'Architecture'],
         sections: [
             {
                 heading: 'The Allure of Micro-Frontends',
@@ -277,7 +277,7 @@ export const articles = [
             'A pragmatic folder structure and set of patterns that have survived three companies and dozens of engineers.',
         publishedAt: '2026-03-05',
         readTime: '7 min read',
-        tags: ['React', 'Architecture', 'Best Practices'],
+        tags: ['React', 'Architecture'],
         sections: [
             {
                 heading: 'Why Structure Matters More Than You Think',
@@ -326,7 +326,7 @@ export const articles = [
             'My PR review philosophy after reviewing thousands of pull requests across three companies.',
         publishedAt: '2026-03-12',
         readTime: '7 min read',
-        tags: ['Engineering Culture', 'Code Review', 'Quality'],
+        tags: ['Code Review', 'Engineering Culture'],
         sections: [
             {
                 heading: 'Code Review Is Not Bug Hunting',
@@ -375,7 +375,7 @@ export const articles = [
             'How we enforced performance budgets in CI at CARS24 and Mamaearth — and what happened when we didn\'t.',
         publishedAt: '2026-03-20',
         readTime: '8 min read',
-        tags: ['Performance', 'CI/CD', 'Web Vitals'],
+        tags: ['Performance', 'CI/CD'],
         sections: [
             {
                 heading: 'Why Performance Budgets Fail',
@@ -424,7 +424,7 @@ export const articles = [
             'After shipping React Native at Flipkart, here is my honest comparison of both frameworks.',
         publishedAt: '2026-03-28',
         readTime: '9 min read',
-        tags: ['React Native', 'Flutter', 'Mobile'],
+        tags: ['React Native', 'Mobile'],
         sections: [
             {
                 heading: 'The Context of My Opinion',
@@ -474,7 +474,7 @@ export const articles = [
             'Lessons from building component libraries at CARS24 and Flipkart — and why most design systems fail.',
         publishedAt: '2026-04-02',
         readTime: '10 min read',
-        tags: ['Design Systems', 'Storybook', 'UI'],
+        tags: ['Design Systems', 'Storybook'],
         sections: [
             {
                 heading: 'Why Most Design Systems Fail',
@@ -532,7 +532,7 @@ export const articles = [
             'Real benchmarks from migrating a production app from Webpack 5 to Vite — including the parts that sucked.',
         publishedAt: '2026-04-10',
         readTime: '8 min read',
-        tags: ['Build Tools', 'Webpack', 'Vite'],
+        tags: ['Webpack', 'Vite'],
         sections: [
             {
                 heading: 'Why We Considered Migrating',
@@ -581,7 +581,7 @@ export const articles = [
             'Chrome DevTools, profiling, strategic logging, and other tools I reach for before touching the code.',
         publishedAt: '2026-04-15',
         readTime: '7 min read',
-        tags: ['Debugging', 'DevTools', 'Performance'],
+        tags: ['Debugging', 'Performance'],
         sections: [
             {
                 heading: 'Debugging Is a Skill, Not a Talent',
@@ -638,7 +638,7 @@ export const articles = [
             'A testing philosophy that balances coverage with velocity — no 100% coverage dogma here.',
         publishedAt: '2026-04-20',
         readTime: '8 min read',
-        tags: ['Testing', 'Jest', 'React Testing Library'],
+        tags: ['Jest', 'React Testing Library'],
         sections: [
             {
                 heading: 'The Testing Pyramid Is Wrong for Frontend',
@@ -689,7 +689,7 @@ export const articles = [
             'A practical guide to Docker for engineers who mostly write React — no unnecessary DevOps jargon.',
         publishedAt: '2026-04-25',
         readTime: '9 min read',
-        tags: ['Docker', 'DevOps', 'Frontend'],
+        tags: ['Docker', 'DevOps'],
         sections: [
             {
                 heading: 'Why Frontend Engineers Should Care About Docker',
@@ -739,7 +739,7 @@ export const articles = [
             'As someone who has been on both sides of the table — my honest prep framework.',
         publishedAt: '2026-04-30',
         readTime: '10 min read',
-        tags: ['Interviews', 'System Design', 'Career'],
+        tags: ['System Design', 'Interviews'],
         sections: [
             {
                 heading: 'System Design Interviews Are Conversations',
@@ -789,7 +789,7 @@ export const articles = [
             'Bundle analysis, tree-shaking, and how we cut Total Blocking Time by 60% at Mamaearth.',
         publishedAt: '2026-05-02',
         readTime: '9 min read',
-        tags: ['Performance', 'JavaScript', 'Bundle Size'],
+        tags: ['Performance', 'Bundle Size'],
         sections: [
             {
                 heading: 'JavaScript Is the Most Expensive Resource on the Web',
@@ -846,7 +846,7 @@ export const articles = [
             'How to ship accessible interfaces in fast-paced teams without treating a11y as an afterthought.',
         publishedAt: '2026-05-05',
         readTime: '7 min read',
-        tags: ['Accessibility', 'Frontend', 'UX'],
+        tags: ['Accessibility', 'Frontend'],
         sections: [
             {
                 heading: 'The False Trade-Off Between Speed and Accessibility',
@@ -894,7 +894,7 @@ export const articles = [
             'GitHub Actions patterns, caching strategies, and how we got our pipeline under 5 minutes.',
         publishedAt: '2026-05-08',
         readTime: '8 min read',
-        tags: ['CI/CD', 'GitHub Actions', 'DevOps'],
+        tags: ['CI/CD', 'GitHub Actions'],
         sections: [
             {
                 heading: 'The CI Pipeline Nobody Wants to Own',
@@ -944,7 +944,7 @@ export const articles = [
             'A personal reflection on career growth, from joining Mamaearth as a junior to leading projects at Flipkart.',
         publishedAt: '2026-05-10',
         readTime: '11 min read',
-        tags: ['Career', 'Growth', 'Engineering'],
+        tags: ['Career', 'Engineering'],
         sections: [
             {
                 heading: 'Where I Started',
@@ -1002,7 +1002,7 @@ export const articles = [
             'A practical comparison from someone who has used all three in production — no hype, just trade-offs.',
         publishedAt: '2026-05-14',
         readTime: '9 min read',
-        tags: ['React', 'State Management', 'Frontend'],
+        tags: ['React', 'State Management'],
         sections: [
             {
                 heading: 'The State Management Landscape Has Changed',

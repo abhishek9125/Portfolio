@@ -130,6 +130,7 @@ function Form() {
                         type="text"
                         id="name"
                         placeholder="Your name"
+                        autoComplete="name"
                         value={name}
                         onChange={(e) => {
                             setName(e.target.value);
@@ -148,6 +149,7 @@ function Form() {
                         type="email"
                         id="email"
                         placeholder="Your email"
+                        autoComplete="email"
                         value={email}
                         onChange={(e) => {
                             setEmail(e.target.value);

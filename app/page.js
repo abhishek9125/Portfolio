@@ -5,6 +5,7 @@ import Work from '@/components/Work'
 import Reviews from '@/components/Reviews'
 import Cta from '@/components/Cta'
 import PhilosophyQuotes from '@/components/PhilosophyQuotes'
+import LighthouseStrip from '@/components/LighthouseStrip'
 
 export default function Home() {
 	return (
@@ -15,6 +16,7 @@ export default function Home() {
 			<Work />
 			<PhilosophyQuotes />
 			<Reviews />
+			<LighthouseStrip />
 			<Cta />
 		</main>
 	)

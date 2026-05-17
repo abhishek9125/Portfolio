@@ -10,15 +10,13 @@ import { TabsContent } from './ui/tabs'
 import { TabsList } from './ui/tabs'
 import { Tabs } from './ui/tabs'
 import {
-    qualificationData,
     expertiseAreas,
     contactPrimary,
     contactSecondary,
+    homeExperienceData,
 } from '@/constants'
 
 function About() {
-    const experience = qualificationData.find((item) => item.title === 'experience')
-
     return (
         <section id="about" className="scroll-mt-32 section-padding max-sm:pt-10">
             <div className="container mx-auto">
@@ -29,8 +27,8 @@ function About() {
                     </p>
                 </SectionReveal>
 
-                <div className="flex flex-col xl:flex-row gap-12 xl:gap-10 max-lg:gap-8">
-                    <SectionReveal className="hidden xl:flex flex-1 items-center justify-center" delay={0.1}>
+                <div className="flex flex-col xl:flex-row xl:items-start gap-12 xl:gap-10 max-lg:gap-8">
+                    <SectionReveal className="hidden xl:flex flex-1 items-start justify-center" delay={0.1}>
                         <AboutVisual />
                     </SectionReveal>
 
@@ -54,7 +52,7 @@ function About() {
                                             <p className="subtitle max-w-xl mx-auto xl:mx-0 mb-0">
                                                 Senior Software Engineer with 5+ years owning features from UI to API —
                                                 high-traffic React &amp; React Native apps, Node.js services, and cloud-backed
-                                                systems across e-commerce at Flipkart, CARS24, and Honasa.
+                                                systems across e-commerce at Flipkart, CARS24, and Mamaearth.
                                             </p>
                                         </div>
 
@@ -84,7 +82,9 @@ function About() {
                                                 Get in touch
                                             </p>
                                             <div className="flex flex-col sm:flex-row gap-3 max-w-xl mx-auto xl:mx-0">
-                                                {contactPrimary.map((item) => (
+                                                {contactPrimary
+                                                    .filter((item) => item.label !== 'Phone')
+                                                    .map((item) => (
                                                     <div
                                                         key={item.label}
                                                         className="flex-1 flex items-center gap-3 p-4 rounded-2xl border border-border/70 bg-white/60 dark:bg-secondary/40"
@@ -150,13 +150,15 @@ function About() {
                                         <p className="text-xs uppercase tracking-[0.2em] text-primary font-semibold mb-3">
                                             Career
                                         </p>
-                                        <h3 className="h3 mb-6">Work Experience</h3>
-                                        <div className="flex flex-col gap-y-4 max-w-2xl mx-auto xl:mx-0">
-                                            {experience.data.map((item, index) => (
+                                        <h3 className="h3 mb-5 max-xl:mb-4">Work Experience</h3>
+                                        <div className="flex flex-col gap-y-4 max-w-xl mx-auto xl:mx-0">
+                                            {homeExperienceData.map((item, index) => (
                                                 <article
-                                                    className="relative text-left pl-4 border-l-2 border-primary/25 py-1"
+                                                    className="relative text-left pl-6 border-l-2 border-primary/20 py-1"
                                                     key={`${item.company}-${item.years}`}
                                                 >
+                                                    {/* Timeline dot */}
+                                                    <span className={`absolute left-[-5px] top-2 w-2 h-2 rounded-full ${index === 0 ? 'bg-primary ring-4 ring-primary/15' : 'bg-primary/50'}`} />
                                                     {index === 0 && (
                                                         <span className="inline-block text-[10px] font-semibold uppercase tracking-wider text-primary bg-primary/10 px-2 py-0.5 rounded-full mb-2">
                                                             Current
@@ -167,9 +169,9 @@ function About() {
                                                         <span className="text-xs text-muted-foreground">{item.years}</span>
                                                     </div>
                                                     <p className="text-primary text-sm font-medium mb-2">{item.role}</p>
-                                                    <ul className="space-y-1.5">
+                                                    <ul className="space-y-1">
                                                         {item.highlights?.map((h) => (
-                                                            <li key={h} className="text-sm text-muted-foreground flex gap-2 leading-relaxed">
+                                                            <li key={h} className="text-sm text-muted-foreground flex gap-2 leading-snug">
                                                                 <span className="text-primary/80 shrink-0 mt-0.5">·</span>
                                                                 {h}
                                                             </li>

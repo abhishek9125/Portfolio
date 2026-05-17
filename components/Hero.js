@@ -22,7 +22,7 @@ const headlineVerbs = ['end to end.', 'at scale.', 'that perform.', 'users love.
 
 const techStack = ['TypeScript', 'React', 'Next.js', 'Node.js', 'React Native', 'AWS', 'GCP', 'Docker']
 
-const companies = ['Flipkart', 'CARS24', 'Mamaearth', 'Honasa', 'BBlunt', 'Aqualogica', 'The Derma Co']
+const companies = ['Flipkart', 'CARS24', 'Mamaearth', 'BBlunt', 'Aqualogica', 'The Derma Co']
 
 const stats = [
     { end: 5, suffix: '+', label: 'Years building' },

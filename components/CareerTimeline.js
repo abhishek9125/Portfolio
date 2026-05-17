@@ -6,7 +6,7 @@ function CareerTimeline() {
             <div className="absolute left-[7px] top-2 bottom-2 w-px bg-border hidden sm:block" />
             <div className="space-y-6">
                 {careerTimeline.map((item, index) => (
-                    <div key={item.company} className="relative sm:pl-8">
+                    <div key={`${item.company}-${item.period}`} className="relative sm:pl-8">
                         <div
                             className={`hidden sm:block absolute left-0 top-1.5 w-[15px] h-[15px] rounded-full border-2 border-background ${
                                 index === 0 ? 'bg-primary ring-4 ring-primary/20' : 'bg-primary/70'
