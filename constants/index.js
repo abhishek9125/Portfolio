@@ -369,11 +369,6 @@ export const contactPrimary = [
         href: 'mailto:abhishek4075@gmail.com',
     },
     {
-        label: 'Phone',
-        text: '+91-7017841375',
-        href: 'tel:+917017841375',
-    },
-    {
         label: 'Location',
         text: 'Bengaluru, India',
     },
