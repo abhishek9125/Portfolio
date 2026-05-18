@@ -33,7 +33,7 @@ function About() {
                     </SectionReveal>
 
                     <SectionReveal className="flex-1" delay={0.15}>
-                        <Tabs defaultValue="about">
+                        <Tabs defaultValue="experience">
                             <TabsList className="w-full grid grid-cols-3 h-auto p-1 xl:max-w-[520px] xl:border dark:border-none">
                                 <TabsTrigger className="text-xs sm:text-sm px-2 py-2.5" value="about">Overview</TabsTrigger>
                                 <TabsTrigger className="text-xs sm:text-sm px-2 py-2.5" value="experience">Experience</TabsTrigger>
