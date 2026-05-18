@@ -25,8 +25,8 @@ const stats = [
 ]
 
 const highlights = [
-    { icon: TrendingUp, metric: '82%', desc: 'infra cost reduction at Flipkart' },
-    { icon: Zap, metric: '280%', desc: 'VAS order growth at CARS24' },
+    { icon: TrendingUp, metric: '82%', desc: 'Cost Reduction for Codepush @ Flipkart' },
+    { icon: Zap, metric: '74%', desc: 'Performance Boost @ MamaEarth' },
 ]
 
 const funFacts = [
@@ -204,7 +204,7 @@ function HeroMobile() {
                 </motion.div>
 
                 {/* Socials + clock */}
-                <motion.div
+                {/* <motion.div
                     custom={5} variants={fade} initial="hidden" animate="visible"
                     className="flex items-center justify-between mb-5 px-2"
                 >
@@ -218,7 +218,7 @@ function HeroMobile() {
                             {currentTime} IST
                         </span>
                     )}
-                </motion.div>
+                </motion.div> */}
 
                 {/* Stats */}
                 <motion.div
