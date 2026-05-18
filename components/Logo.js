@@ -15,10 +15,10 @@ function Logo({ showTagline = true }) {
             {showTagline && (
                 <span className="flex flex-col leading-none min-w-0">
                     <span className="font-bold text-sm sm:text-base tracking-tight text-foreground truncate">
-                        Abhishek
+                        Abhishek Agarwal
                     </span>
                     <span className="hidden sm:block text-[10px] sm:text-[11px] uppercase tracking-[0.16em] text-muted-foreground mt-0.5 truncate">
-                        Full-stack engineer
+                        Full-stack Software Engineer
                     </span>
                 </span>
             )}

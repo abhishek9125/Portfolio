@@ -16,7 +16,7 @@ export default function Home() {
 			<Work />
 			<PhilosophyQuotes />
 			<Reviews />
-			<LighthouseStrip />
+			{/* <LighthouseStrip /> */}
 			<Cta />
 		</main>
 	)

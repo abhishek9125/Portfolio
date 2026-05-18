@@ -2,10 +2,10 @@ import { Cloud, Cpu, Layout, Server } from 'lucide-react'
 import { engineeringToolchain } from '@/constants'
 
 const highlights = [
-    { icon: Layout, label: 'Frontend', value: 'React · Next.js · RN' },
-    { icon: Server, label: 'Backend', value: 'Node.js · APIs · Services' },
+    { icon: Layout, label: 'Frontend', value: 'React · React Native · Next' },
+    { icon: Server, label: 'Backend', value: 'Node.js · APIs · Databases' },
     { icon: Cpu, label: 'Systems', value: 'Micro FE · Design Systems' },
-    { icon: Cloud, label: 'Cloud', value: 'GCP · AWS · Azure' },
+    { icon: Cloud, label: 'Cloud', value: 'GCP · AWS' },
 ]
 
 function AboutVisual() {
@@ -21,10 +21,10 @@ function AboutVisual() {
                         Engineering focus
                     </p>
                     <p className="text-2xl font-bold leading-tight tracking-tight">
-                        Scalable products across the full stack
+                        Building Scalable Tech & Product
                     </p>
                     <p className="text-sm text-muted-foreground mt-2 leading-relaxed">
-                        E-commerce at scale · millions of users
+                        E-commerce at scale · Millions of Users
                     </p>
                 </div>
 

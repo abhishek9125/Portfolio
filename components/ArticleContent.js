@@ -54,7 +54,7 @@ export default function ArticleContent({ article }) {
     const handleShare = async () => {
         const data = {
             title: article.title,
-            url: `https://abhishekagarwal.me/article/${article.slug}`,
+            url: `https://abhishekagarwal.info/article/${article.slug}`,
         }
         try {
             if (navigator.share) await navigator.share(data)

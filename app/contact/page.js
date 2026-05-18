@@ -69,9 +69,9 @@ function Contact() {
                     </div>
                 )}
 
-                {/* Form + contact info */}
+                {/* Form + contact info — form first on mobile, direct contact left on desktop */}
                 <div className="grid xl:grid-cols-2 gap-10 xl:gap-12 overflow-visible">
-                    <div className="flex flex-col gap-y-8">
+                    <div className="order-2 xl:order-1 flex flex-col gap-y-8">
                         {/* Contact details */}
                         <div className="space-y-4">
                             <p className="text-xs uppercase tracking-[0.15em] text-muted-foreground font-medium">
@@ -131,17 +131,19 @@ function Contact() {
                                     Projects
                                 </Link>
                                 <Link
-                                    href="/setup"
+                                    href="/articles"
                                     className="inline-flex items-center gap-1.5 text-sm px-4 py-2 rounded-full border border-border/60 bg-white/50 dark:bg-secondary/30 hover:border-primary/30 transition-colors"
                                 >
                                     <Zap size={13} />
-                                    My setup
+                                    Articles
                                 </Link>
                             </div>
                         </div>
                     </div>
 
-                    <Form />
+                    <div className="order-1 xl:order-2">
+                        <Form />
+                    </div>
                 </div>
             </div>
         </section>

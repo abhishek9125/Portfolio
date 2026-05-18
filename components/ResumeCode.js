@@ -58,7 +58,7 @@ function buildResumeLines() {
 
     const email = contactPrimary?.find(c => c.label === 'Email')?.text || 'abhishek4075@gmail.com'
     push([{ type: 'property', value: 'email' }, { type: 'plain', value: ': ' }, { type: 'string', value: `"${email}"` }, { type: 'plain', value: ',' }], 1)
-    push([{ type: 'property', value: 'website' }, { type: 'plain', value: ': ' }, { type: 'string', value: '"abhishekagarwal.me"' }, { type: 'plain', value: ',' }], 1)
+    push([{ type: 'property', value: 'website' }, { type: 'plain', value: ': ' }, { type: 'string', value: '"abhishekagarwal.info"' }, { type: 'plain', value: ',' }], 1)
     push([])
 
     // Experience — collapsible section marker

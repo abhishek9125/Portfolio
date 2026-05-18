@@ -10,7 +10,7 @@ import Socials from './Socials'
 import StatCounter from './StatCounter'
 import { Button } from './ui/button'
 
-const headlineVerbs = ['end to end.', 'at scale.', 'that perform.', 'users love.']
+const headlineVerbs = ['end to end.', ' at big scale.', 'that perform.', 'users love.']
 
 const career = [
     { company: 'Mamaearth', period: "'21–'24" },
@@ -82,7 +82,7 @@ function HeroMobile() {
     }, [])
 
     const handleShare = async () => {
-        const data = { title: 'Abhishek Agarwal — Full-Stack Engineer', url: 'https://abhishekagarwal.me' }
+        const data = { title: 'Abhishek Agarwal — Full-Stack Engineer', url: 'https://abhishekagarwal.info' }
         try {
             if (navigator.share) await navigator.share(data)
             else await navigator.clipboard.writeText(data.url)
@@ -120,9 +120,9 @@ function HeroMobile() {
                         <Sparkles size={12} className="shrink-0" />
                         SDE II @ Flipkart
                     </span>
-                    <span className="inline-flex items-center px-3 py-1.5 rounded-full bg-secondary/10 dark:bg-white/10 text-muted-foreground text-[11px] border border-border/50">
+                    {/* <span className="inline-flex items-center px-3 py-1.5 rounded-full bg-secondary/10 dark:bg-white/10 text-muted-foreground text-[11px] border border-border/50">
                         Building OTA &amp; e-commerce platforms
-                    </span>
+                    </span> */}
                     <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-[11px] border border-emerald-500/20">
                         <span className="relative flex h-1.5 w-1.5">
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />

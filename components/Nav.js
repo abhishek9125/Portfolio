@@ -11,7 +11,7 @@ export const navLinks = [
     { path: '/projects', name: 'projects' },
     { path: '/articles', name: 'articles', matchPrefix: '/article' },
     { path: '/resume', name: 'resume' },
-    { path: '/setup', name: 'setup' },
+    // { path: '/setup', name: 'setup' },
     { path: '/contact', name: 'contact' },
 ]
 

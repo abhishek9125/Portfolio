@@ -8,22 +8,22 @@ const capabilities = [
     {
         icon: Layout,
         title: 'Frontend',
-        items: ['React', 'Next.js', 'React Native'],
+        items: ['React', 'React Native'],
     },
     {
         icon: Server,
         title: 'Backend',
-        items: ['Node.js', 'REST APIs', 'Microservices'],
+        items: ['Node', 'Microservices', 'CI/CD'],
     },
     {
         icon: Database,
         title: 'Data',
-        items: ['Redis', 'SQL', 'Caching'],
+        items: ['Redis', 'SQL', 'NoSQL'],
     },
     {
         icon: Cloud,
         title: 'Cloud',
-        items: ['GCP', 'AWS', 'Azure'],
+        items: ['GCP', 'AWS', 'Docker'],
     },
 ]
 

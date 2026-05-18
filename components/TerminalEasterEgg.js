@@ -34,7 +34,7 @@ const COMMANDS = {
         'Email:    abhishek4075@gmail.com',
         'LinkedIn: linkedin.com/in/abhishek9125',
         'GitHub:   github.com/abhishek9125',
-        'Web:      abhishekagarwal.me',
+        'Web:      abhishekagarwal.info',
     ],
     projects: () => [
         '17+ projects shipped across 4 companies.',

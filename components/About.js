@@ -48,9 +48,9 @@ function About() {
                                             <p className="text-xs uppercase tracking-[0.2em] text-primary font-semibold mb-3">
                                                 Summary
                                             </p>
-                                            <h3 className="h3 mb-4">Full-stack engineering at product scale</h3>
+                                            <h3 className="h3 mb-4">Full Stack Software Engineer building scalable products</h3>
                                             <p className="subtitle max-w-xl mx-auto xl:mx-0 mb-0">
-                                                Senior Software Engineer with 5+ years owning features from UI to API —
+                                                Senior Software Engineer with 5+ years owning features from API to UI —
                                                 high-traffic React &amp; React Native apps, Node.js services, and cloud-backed
                                                 systems across e-commerce at Flipkart, CARS24, and Mamaearth.
                                             </p>

@@ -20,38 +20,38 @@ import { Button } from './ui/button'
 
 const headlineVerbs = ['end to end.', 'at scale.', 'that perform.', 'users love.']
 
-const techStack = ['TypeScript', 'React', 'Next.js', 'Node.js', 'React Native', 'AWS', 'GCP', 'Docker']
+const techStack = ['Node', 'React', 'React Native', 'PostgreSQL', 'AWS', 'GCP', 'Docker']
 
-const companies = ['Flipkart', 'CARS24', 'Mamaearth', 'BBlunt', 'Aqualogica', 'The Derma Co']
+const companies = ['Flipkart', 'Mamaearth', 'CARS24', 'The Derma Co', 'Aqualogica', 'BBlunt', 'Ayuga', 'Staze Beauty']
 
 const stats = [
     { end: 5, suffix: '+', label: 'Years building' },
-    { end: 17, suffix: '+', label: 'Projects shipped' },
-    { end: 4, suffix: '', label: 'Companies' },
+    { end: 32, suffix: '+', label: 'Projects shipped' },
+    { end: 3, suffix: '', label: 'Companies' },
 ]
 
 const highlights = [
     { icon: TrendingUp, metric: '82%', desc: 'infra cost reduction at Flipkart' },
-    { icon: Zap, metric: '280%', desc: 'VAS order growth at CARS24' },
+    { icon: Zap, metric: '80%+', desc: 'Performance improvements at Mamaearth' },
 ]
 
 const achievements = [
-    { icon: Globe, value: '100M+', label: 'Users served', desc: 'Across Flipkart & CARS24' },
-    { icon: Code2, value: '200K+', label: 'Lines shipped', desc: 'Production code' },
-    { icon: Rocket, value: '2 weeks', label: 'Fastest ship', desc: 'Full checkout flow' },
-    { icon: Users, value: '4+', label: 'Engineers mentored', desc: 'Junior to mid-level' },
-    { icon: Flame, value: '6.9s', label: 'TBT reduced', desc: '8.2s → 1.3s at Mamaearth' },
-    { icon: Award, value: '8+', label: 'Products live', desc: 'In production today' },
+    { icon: Globe, value: '100M+', label: 'Users Served', desc: 'Across Flipkart & Mamaearth' },
+    { icon: Code2, value: '200K+', label: 'Lines Shipped', desc: 'Production code' },
+    { icon: Rocket, value: '2 weeks', label: 'Fastest Ship', desc: 'Loyalty Program at Mamaearth' },
+    { icon: Users, value: '10+', label: 'Mentored', desc: 'Junior to mid-level Engineers' },
+    { icon: Flame, value: '80+', label: 'Lighthouse Score', desc: '6 to 81 at Mamaearth' },
+    { icon: Award, value: '32+', label: 'Products live', desc: 'In production today' },
 ]
 
 const funFacts = [
+    'I currently have 40 browser tabs open and I am emotionally attached to all of them',
     'I once shipped a hotfix from an airport at 3 AM',
-    'My first website was an HTML page about cricket',
     'I think in components, not pages',
-    'Weekend hobby: exploring coffee shops in Bengaluru',
+    'My desk setup has enough RGB lighting to be seen from the International Space Station'
 ]
 
-const currentlyBuilding = 'OTA delivery pipeline on GCP with Redis caching'
+const currentlyBuilding = 'Real-time monitoring dashboard for Flipkart'
 
 const fadeUp = {
     hidden: { opacity: 0, y: 28 },
@@ -113,7 +113,7 @@ function HeroDesktop() {
     }
 
     const handleShare = async () => {
-        const data = { title: 'Abhishek Agarwal — Full-Stack Engineer', url: 'https://abhishekagarwal.me' }
+        const data = { title: 'Abhishek Agarwal — Full-Stack Engineer', url: 'https://abhishekagarwal.info' }
         try {
             if (navigator.share) await navigator.share(data)
             else await navigator.clipboard.writeText(data.url)
@@ -151,10 +151,10 @@ function HeroDesktop() {
                         >
                             <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/25 bg-primary/5 text-primary text-sm font-medium">
                                 <Sparkles size={14} className="shrink-0" />
-                                SDE II @ Flipkart · Bengaluru
+                                SDE II @ Flipkart
                             </span>
                             <span className="text-xs px-3 py-1 rounded-full bg-secondary/10 dark:bg-white/10 text-muted-foreground border border-border/60">
-                                Currently building OTA &amp; e-commerce platforms
+                                Currently building awseome things at Flipkart
                             </span>
                         </motion.div>
 
@@ -178,7 +178,7 @@ function HeroDesktop() {
                         </motion.h1>
 
                         <motion.div
-                            custom={2} variants={fadeUp} initial="hidden" animate="visible"
+                            custom={2}
                             className="mb-6"
                         >
                             <ScrollHighlight
@@ -294,7 +294,7 @@ function HeroDesktop() {
                         ))}
                     </div>
                     <p className="text-sm text-muted-foreground mt-2">
-                        Products serving <span className="font-semibold text-foreground/80">100M+</span> users
+                        Products serving <span className="font-semibold text-foreground/80">10M+</span> daily active users
                     </p>
                 </motion.div>
 

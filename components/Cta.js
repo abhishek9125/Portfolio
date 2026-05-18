@@ -40,8 +40,8 @@ function Cta() {
                     </div>
 
                     <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-8 text-sm text-muted-foreground">
-                        <Link href="/case-studies" className="hover:text-primary transition-colors">Case Studies</Link>
-                        <span className="text-border">·</span>
+                        {/* <Link href="/case-studies" className="hover:text-primary transition-colors">Case Studies</Link>
+                        <span className="text-border">·</span> */}
                         <Link href="/projects" className="hover:text-primary transition-colors">Projects</Link>
                         <span className="text-border">·</span>
                         <Link href="/articles" className="hover:text-primary transition-colors">Articles</Link>

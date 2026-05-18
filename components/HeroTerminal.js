@@ -5,11 +5,11 @@ import { cn } from '@/lib/utils'
 
 export const terminalLines = [
     { prompt: true, text: 'whoami' },
-    { output: 'abhishek — full-stack engineer' },
+    { output: 'abhishek — full-stack software engineer' },
     { prompt: true, text: 'stack --list' },
-    { output: 'node · react · next · typescript · redis · gcp' },
+    { output: 'node · react · react native · sql · gcp · docker' },
     { prompt: true, text: 'status' },
-    { output: 'shipping @ flipkart ✓' },
+    { output: 'shipping products at scale @ flipkart ✓' },
 ]
 
 function HeroTerminal({ className, animateLines = true, title = 'abhishek — zsh' }) {

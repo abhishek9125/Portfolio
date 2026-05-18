@@ -277,7 +277,7 @@ export default function ResumeVisual() {
                                     <span className="text-primary"> Agarwal</span>
                                 </motion.h1>
                                 <p className="text-sm text-muted-foreground font-medium print:text-[10.5pt] print:leading-snug">
-                                    <span itemProp="jobTitle">Senior Software Engineer (Frontend Specialist)</span>
+                                    <span itemProp="jobTitle">Senior Software Engineer</span>
                                 </p>
                             </div>
                         </SectionReveal>
@@ -374,7 +374,7 @@ export default function ResumeVisual() {
                         </SectionReveal>
 
                         {/* Achievements */}
-                        <SectionReveal delay={0.18}>
+                        {/* <SectionReveal delay={0.18}>
                             <section aria-labelledby="resume-achievements-heading">
                                 <h2 id="resume-achievements-heading" className="text-[11px] uppercase tracking-[0.15em] text-primary font-semibold mb-3 print:mb-1 print:text-[9px] flex items-center gap-1.5">
                                     <Award size={13} className="print:w-3 print:h-3 shrink-0" aria-hidden />
@@ -386,7 +386,7 @@ export default function ResumeVisual() {
                                     ))}
                                 </ul>
                             </section>
-                        </SectionReveal>
+                        </SectionReveal> */}
                     </aside>
 
                     {/* ── Main Content ── */}
@@ -406,7 +406,7 @@ export default function ResumeVisual() {
                                         Senior frontend engineer shipping platforms at scale across e-commerce and FinTech
                                     </p>
                                 </header>
-                                {RESUME_LINK && (
+                                {/* {RESUME_LINK && (
                                     <a
                                         href={RESUME_LINK}
                                         target="_blank"
@@ -416,7 +416,7 @@ export default function ResumeVisual() {
                                         <Download size={14} />
                                         Official PDF (Drive)
                                     </a>
-                                )}
+                                )} */}
                             </div>
                         </SectionReveal>
 

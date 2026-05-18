@@ -16,26 +16,24 @@ export default function ResumePageView() {
                     </div>
                     <h1 className="h1 mb-3">Abhishek Agarwal</h1>
                     <p className="subtitle max-w-lg mx-auto mb-2">
-                        Senior software engineer (frontend specialist) at Flipkart. Experience across e-commerce, FinTech,
+                        Software Development engineer II @ Flipkart. Experience across e-commerce, FinTech,
                         and high-traffic consumer products.
                     </p>
-                    <p className="text-xs text-muted-foreground max-w-lg mx-auto mb-5">
-                        <strong className="text-foreground">ATS tip:</strong> Upload the plain-text file below to job portals; use{' '}
+                    {/* <p className="text-xs text-muted-foreground max-w-lg mx-auto mb-5">
                         {RESUME_LINK ? (
                             <strong className="text-foreground">Official PDF (Drive)</strong>
                         ) : (
                             <span className="text-foreground">your PDF</span>
                         )}{' '}
-                        for reviewers.
-                    </p>
+                    </p> */}
                     <div className="flex items-center justify-center gap-3 flex-wrap">
                         <a
                             href="/api/resume-text"
                             download="Abhishek-Agarwal-Resume-ATS.txt"
                             className="inline-flex items-center gap-2 h-10 px-5 rounded-full border border-border/60 text-sm font-medium hover:border-primary/30 transition-colors bg-background"
                         >
-                            <FileType2 size={16} />
-                            ATS plain text (.txt)
+                            {/* <FileType2 size={16} />
+                            ATS plain text (.txt) */}
                         </a>
                         {RESUME_LINK && (
                             <a

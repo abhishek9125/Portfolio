@@ -32,12 +32,12 @@ function FeaturedCaseStudy() {
                                         <ArrowRight size={18} />
                                     </Button>
                                 </Link>
-                                <Link href="/case-studies">
+                                {/* <Link href="/case-studies">
                                     <Button variant="outline" className="gap-x-2 max-lg:w-full sm:w-auto">
                                         View more case studies
                                         <ArrowRight size={18} />
                                     </Button>
-                                </Link>
+                                </Link> */}
                             </div>
                         </div>
                         <div className="flex-1 grid grid-cols-3 gap-3 max-w-lg mx-auto lg:mx-0 lg:ml-auto w-full max-lg:order-1 lg:order-2 max-sm:gap-2">
